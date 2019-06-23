@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PropertyList>
+  <default>
+    <menu n="10">
+      <label>Mil-Mi-8</label>
+      <enabled type="bool">true</enabled>
+      <item>
+        <label>Autostart</label>
+        <binding>
+          <command>property-toggle</command>
+          <property>sim/model/start-idling</property>
+        </binding>
+      </item>
+      <item>
+        <label>Select Livery</label>
+        <enabled>false</enabled>
+        <binding>
+          <command>nasal</command>
+          <script>aircraft.livery.dialog.toggle()</script>
+        </binding>
+      </item>
+      <item>
+        <label>Blades visible</label>
+        <binding>
+          <command>nasal</command>
+          <script>var p = "rotors/main/bladesvisible";
+            setprop(p, var i = !getprop(p));
+            gui.popupTip("Blades visible " ~ (i ? "On" : "Off"));</script>
+        </binding>
+      </item>
+      <item>
+        <label>Pilot/copilot visible</label>
+        <binding>
+          <command>nasal</command>
+          <script>var p = "/sim/model/Mi8/pilot-visible";
+            setprop(p, var i = !getprop(p));
+            var a = "/sim/model/Mi8/copilot-visible";
+            setprop(a, var i = !getprop(a));
+            gui.popupTip("Pilots visible " ~ (i ? "On" : "Off"));</script>
+        </binding>
+      </item>
+      <item>
+        <label>Hide/Show Gps</label>
+        <enabled>false</enabled>
+        <binding>
+          <command>nasal</command>
+          <script>var p = "/sim/model/Mi8/gps-visible";
+            setprop(p, var i = !getprop(p));
+
+            gui.popupTip("Gps visible " ~ (i ? "On" : "Off"));</script>
+        </binding>
+      </item>
+      <item>
+        <label>Immatriculation</label>
+        <enabled>false</enabled>
+        <binding>
+          <command>nasal</command>
+          <script>Mi8.immat_dialog.toggle()</script>
+        </binding>
+      </item>
+    </menu>
+  </default>
+</PropertyList>

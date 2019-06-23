@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <key n="4">
+    <name>Ctrl-d</name>
+    <desc>Toggle SAS enable</desc>
+    <binding>
+      <command>nasal</command>
+      <script>Mi8.sas.toggleEnable();</script>
+    </binding>
+  </key>
+  
+  <key n="5">
+    <name>Ctrl-e</name>
+    <desc>Toggle CAS enable</desc>
+    <binding>
+      <command>nasal</command>
+      <script>Mi8.cas.toggleEnable();</script>
+    </binding>
+  </key>
+  
+  <key n="6">
+    <name>Ctrl-f</name>
+    <desc>Toggle AutoHover</desc>
+    <binding>
+      <command>nasal</command>
+      <script>Mi8.afcs.toggleAutoHover();</script>
+    </binding>
+  </key>
+
+  <key n="100">
+    <name>d</name>
+    <desc>Close pilot door</desc>
+    <binding>
+      <command>nasal</command>
+      <script>
+      setprop("/instrumentation/doors/Rcrew/position-norm",0);
+      </script>
+    </binding>
+  </key>
+
+  <key n="82">
+    <name>R</name>
+    <desc>Toggle rotor brake</desc>
+    <binding>
+      <command>nasal</command>
+      <script>
+        var p = "/controls/rotor/brake";
+        setprop(p, !getprop(p));
+      </script>
+    </binding>
+  </key>
+
+  <key n="114">
+    <name>r</name>
+    <desc>Apply rotor brake</desc>
+    <binding>
+      <command>nasal</command>
+      <script>interpolate("/controls/rotor/brake", 1.0, 2)</script>
+    </binding>
+    <mod-up>
+      <binding>
+        <command>nasal</command>
+        <script>interpolate("/controls/rotor/brake", 0.0, 2)</script>
+      </binding>
+    </mod-up>
+  </key>
+
+  <key n="125">
+    <name>}</name>
+    <desc>Start Engines</desc>
+    <binding>
+      <command>nasal</command>
+      <script>Mi8.Startup()</script>
+    </binding>
+  </key>
+
+  <key n="123">
+    <name>{</name>
+    <desc>Shutdown Engines</desc>
+    <binding>
+      <command>nasal</command>
+      <script>Mi8.Shutdown()</script>
+    </binding>
+  </key>
+
+</PropertyList>
+

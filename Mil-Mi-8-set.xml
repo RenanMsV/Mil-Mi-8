@@ -4,7 +4,7 @@
 
   <sim>
 
-    <description>Mil-Mi-8 (YASIM)</description>
+    <description>Mil-Mi-8 (YASIM) - ALPHA</description>
     <long-description>The Mil Mi-8 is a medium twin-turbine helicopter, originally designed by the Soviet Union, and now produced by Russia. In addition to its most common role as a transport helicopter, the Mi-8 is also used as an airborne command post, armed gunship, and reconnaissance platform. Along with the related, more powerful Mil Mi-17, the Mi-8 is among the world's most-produced helicopters, used by over 50 countries. As of 2015, it is the third most common operational military aircraft in the world.</long-description>
     <author>Kaito, RenanMsV, manilov.ap (3D), BARANGER Emmanuel (Systems), AUBERGER Jean Michel (FDM), BACON Guillaume (Sounds and Simulation Config)</author>
     <aircraft-version>0.1</aircraft-version>
@@ -45,6 +45,29 @@
       </Mi8>
     </model>
 
+    <startup>
+      <splash-texture>Aircraft/Mil-Mi-8/Splashes/splash.png</splash-texture>
+    </startup>
+    <previews>
+      <preview>
+        <type>exterior</type>
+        <splash type="bool">true</splash>
+        <path>Splashes/splash.png</path>
+      </preview>
+    </previews>
+
+    <menubar include="Dialogs/Mil-Mi-8-menu.xml"/>
+
+    <view n="0">
+      <internal archive="y">true</internal>
+      <config>
+        <pitch-offset-deg>2.5</pitch-offset-deg>
+        <x-offset-m archive="y">0.617</x-offset-m> <!-- right/left -->
+        <y-offset-m archive="y">-0.0639</y-offset-m> <!-- up/down -->
+        <z-offset-m archive="y">-6.275</z-offset-m> <!-- aft/fore -->
+      </config>
+    </view>
+
     <help>
       <title>Mil-Mi-8 - background and help</title>
       <line></line>
@@ -83,5 +106,68 @@
     </help>
 
   </sim>
-  
+
+  <controls>
+    <engines>
+      <engine n="0">
+        <magnetos>0</magnetos>
+        <throttle>1.0</throttle>
+        <clutch type="bool">0</clutch>
+        <clutchguard type="bool">0</clutchguard>
+      </engine>
+    </engines>
+    <gear>
+      <brake-parking>1</brake-parking>
+    </gear>
+    <rotor>
+      <engine-throttle type="double">1.0</engine-throttle>
+      <brake>0</brake>
+      <reltarget>1</reltarget>
+      <maxreltorque>1</maxreltorque>
+    </rotor>
+    <flight>
+      <aileron-trim>0</aileron-trim>
+      <elevator-trim>0</elevator-trim>
+    </flight>
+  </controls>
+
+  <engines>
+    <engine>
+      <rpm type="double">0</rpm>
+      <running type="bool">false</running>
+      <clutch-engaged type="bool">false</clutch-engaged>
+    </engine>
+  </engines>
+
+  <rotors>
+    <main>
+      <rpm type="double">0</rpm>
+      <cone-deg type="double">0</cone-deg>
+      <cone1-deg type="double">0</cone1-deg>
+      <cone2-deg type="double">0</cone2-deg>
+      <cone3-deg type="double">0</cone3-deg>
+      <cone4-deg type="double">0</cone4-deg>
+    </main>
+  </rotors>
+
+  <instrumentation>
+    <gsdi>
+      <serviceable type="bool">true</serviceable>
+      <enabled type="bool">true</enabled>
+    </gsdi>
+  </instrumentation>
+
+  <input>
+    <keyboard include="Nasal/Mi8-keyboard.xml"/>
+  </input>
+
+  <nasal>
+    <Mi8>
+      <file>Aircraft/Mil-Mi-8/Nasal/Mi8.nas</file>
+      <file>Aircraft/Mil-Mi-8/Nasal/electrical.nas</file>
+      <file>Aircraft/Mil-Mi-8/Nasal/fcs-management.nas</file>
+      <file>Aircraft/Mil-Mi-8/Nasal/generic-helicopter-fcs.nas</file>
+    </Mi8>
+  </nasal>
+
 </PropertyList>
