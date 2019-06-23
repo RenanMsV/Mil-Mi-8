@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <sim>
+
+    <description>Mil-Mi-8 (YASIM)</description>
+    <long-description>The Mil Mi-8 is a medium twin-turbine helicopter, originally designed by the Soviet Union, and now produced by Russia. In addition to its most common role as a transport helicopter, the Mi-8 is also used as an airborne command post, armed gunship, and reconnaissance platform. Along with the related, more powerful Mil Mi-17, the Mi-8 is among the world's most-produced helicopters, used by over 50 countries. As of 2015, it is the third most common operational military aircraft in the world.</long-description>
+    <author>Kaito, RenanMsV, manilov.ap (3D), BARANGER Emmanuel (Systems), AUBERGER Jean Michel (FDM), BACON Guillaume (Sounds and Simulation Config)</author>
+    <aircraft-version>0.1</aircraft-version>
+    <status>Alpha</status>
+    <flight-model archive="y">yasim</flight-model>
+    <aero archive="y">Mil-Mi-8</aero>
+    
+    <rating>
+      <FDM type="int">1</FDM>
+      <systems type="int">0</systems>
+      <cockpit type="int">0</cockpit>
+      <model type="int">2</model>
+    </rating>
+
+    <tags>
+      <tag>helicopter</tag>
+      <tag>transport</tag>
+      <tag>cargo</tag>
+      <tag>1980s</tag>
+      <tag>fixed-gear</tag>
+      <tag>coldwar</tag>
+      <tag>2-engine</tag>
+    </tags>
+
+    <sound>
+      <path>Aircraft/Mil-Mi-8/Sounds/sound.xml</path>
+    </sound>
+
+    <model>
+      <path archive="y">Aircraft/Mil-Mi-8/Models/Mil-Mi-8.xml</path>
+      <livery>
+        <file type="string">default</file>
+      </livery>
+      <Mi8>
+        <state type="int">0</state>
+        <engine type="float">0.0</engine>
+        <rotor-step-deg type="float">-1.0</rotor-step-deg>
+      </Mi8>
+    </model>
+
+    <help>
+      <title>Mil-Mi-8 - background and help</title>
+      <line></line>
+      <key>
+        <name>{</name>
+        <desc>Start engines</desc>
+      </key>
+      <key>
+        <name>}</name>
+        <desc>Shutdown engines</desc>
+      </key>
+      <key>
+        <name>d</name>
+        <desc>Close pilot door</desc>
+      </key>
+      <key>
+        <name>R</name>
+        <desc>Toggle rotor brake</desc>
+      </key>
+      <key>
+        <name>r</name>
+        <desc>Apply rotor brake</desc>
+      </key>
+      <key>
+        <name>Ctrl d</name>
+        <desc>Toggle S.A.S.</desc>
+      </key>
+      <key>
+        <name>Ctrl e</name>
+        <desc>Toggle C.A.S.</desc>
+      </key>
+      <key>
+        <name>Ctrl f</name>
+        <desc>Auto hover</desc>
+      </key>
+    </help>
+
+  </sim>
+  
+</PropertyList>

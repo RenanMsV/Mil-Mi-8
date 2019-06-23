@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!-- R44 FDM
+
+     2011 BARANGER Emmanuel First for test
+     2011 JM-26 First really R44 FDM
+     2017 Re-used as R66 FDM
+   -->
+
+   <airplane mass="1280">
+
+    <approach speed="47" aoa="16">
+      <control-setting axis="/controls/engines/engine[0]/throttle" value="0.3"/>
+    </approach>
+
+    <cruise speed="125" alt="0">
+      <control-setting axis="/controls/engines/engine[0]/throttle" value="1.0"/>
+    </cruise>
+
+    <rotor name="main" 
+     x="2.218" y="0.0" z="1.605" 
+     nx="0.05" ny="0" nz="1"
+     fx="0.99" fy="0" fz="-0.043" 
+     ccw="1"
+     phi0="45"
+     maxcollective="17"
+     mincollective="0.3"
+     mincyclicele="-9.5"
+     maxcyclicele="9.5"
+     mincyclicail="-2.5"
+     maxcyclicail="2.7"
+     diameter="10.1"
+     numblades="2"
+     weightperblade="60"
+     relbladecenter="0.5"
+     dynamic="1"
+     rpm="495"
+     rellenflaphinge="0.2"
+     delta3="0.0"
+     delta=".25"
+     pitch-a="10"
+     pitch-b="15"
+     flapmin="-13.0"
+     flapmax="13.0"
+     flap0="-2.0"
+     flap0factor="0"
+     notorque="0"
+     dragfactor="0.30"
+     translift-ve="20"
+     translift-maxfactor="0.7"
+     ground-effect-constant="0.1"
+     twist="-8.5"
+     taper="1"
+     chord="0.18288"
+     number-of-segments="8"
+     number-of-parts="8"
+     rel-len-where-incidence-is-measured="0.7"
+     rel-len-blade-start="0.04"
+     airfoil-lift-coefficient="5.67"
+     airfoil-drag-coefficient0="0.01"
+     airfoil-drag-coefficient1="0.05"
+     incidence-stall-zero-speed="19"
+     incidence-stall-half-sonic-speed="10"
+     lift-factor-stall="0.18"
+     stall-change-over="5.5"
+     drag-factor-stall="2.0"
+     cyclic-factor="1.0"
+     rotor-correction-factor="0.9">
+     <control-input axis="/controls/flight/aileron-trim" control="CYCLICAIL" split="true"/>
+     <control-input axis="/controls/flight/fcs/roll" control="CYCLICAIL" src0="-1.0" src1="1.0" dst0="-1.0" dst1="1.0"/>
+     <control-input axis="/controls/flight/elevator-trim" control="CYCLICELE" split="true"/>
+     <control-input axis="/controls/flight/fcs/pitch" control="CYCLICELE" src0="-1.0" src1="1.0" dst0="-1.0" dst1="1.0"/>
+     <control-input axis="/controls/engines/engine[0]/throttle" control="COLLECTIVE" src0="0.0" src1="1.0" dst0="1.0" dst1="-1.0"/>
+   </rotor>
+
+   <rotor name="tail"
+     x="-3.609" y="0.362" z="0.395"
+     nx="0.0" ny="-1" nz="0.0"
+     fx="1" fy="0" fz="0"
+     ccw="1"
+     maxcollective="24"
+     mincollective="-5"
+     diameter="1.47"
+     numblades="2"
+     weightperblade="1"
+     relbladecenter="0.55"
+     dynamic="0.70"
+     rpm="3356"
+     rellenflaphinge="0.0"
+     delta3="1"
+     translift="0" delta="0.8"
+     pitch-a="10"
+     pitch-b="15"
+     airfoil-lift-coefficient="6.4"
+     airfoil-drag-coefficient0="0.0035"
+     airfoil-drag-coefficient1="0.10"
+     incidence-stall-zero-speed="19.25"
+     incidence-stall-half-sonic-speed="10.5"
+     lift-factor-stall="0.26"
+     stall-change-over="7"
+     drag-factor-stall="8"
+     notorque="0"
+     taper="1"
+     chord="0.116"
+     number-of-segments="5"
+     number-of-parts="4"
+     rel-len-blade-start="0.2"
+     rotor-correction-factor="0.9"
+     downwashfactor="0.3">
+     <control-input axis="/controls/flight/fcs/yaw" control="COLLECTIVE" invert="true" src0="-1.0" src1="1.0" dst0="-1.0" dst1="1.0"/>
+     <control-input axis="/controls/flight/fcs/tail-rotor/throttle" control="COLLECTIVE" src0="-1.0" src1="1.0" dst0="-1.0" dst1="1.0"/>
+   </rotor>
+
+   <rotorgear max-power-engine="380"
+     max-power-rotor-brake="50"
+     rotorgear-friction="0.5"
+     engine-prop-factor="0.005"
+     engine-accel-limit="3"
+     yasimdragfactor="10"
+     yasimliftfactor="140">
+     <!--<control-input axis="/controls/engines/engine[0]/magnetos" control="ROTORGEARENGINEON"/>-->
+     <control-input axis="/engines/engine/clutch-engaged" control="ROTORGEARENGINEON"/>
+     <control-input axis="/controls/rotor/brake" control="ROTORBRAKE" src0="0.0" src1="1.0" dst0="0.0" dst1="1.0"/>
+   </rotorgear>
+
+   <cockpit x="3.405" y="0.252" z="-0.140"/>
+
+   <!-- Fuse -->
+   <fuselage ax="4.538" ay="0" az="-0.759" bx=" 0.594" by="0" bz="-0.534" width="1.361" taper="0.5" midpoint="0.35"/>
+   <fuselage ax="1.751" ay="0" az="-0.069" bx="-3.678" by="0" bz=" 0.352" width="0.380" taper="0.5" midpoint="0.00"/>
+
+   <vstab x="-3.589" y="-0.182" z="0.320"
+     chord="0.510" 
+     length="1.080" 
+     taper="0.5" 
+     sweep="13">
+     <stall aoa="16" width="4" peak="1.5"/>
+   </vstab>
+
+   <vstab x="-3.589" y="-0.182" z="0.320"
+     chord="0.510" 
+     length="0.700" 
+     taper="0.6"
+     dihedral="270" 
+     sweep="24">
+     <stall aoa="16" width="4" peak="1.5"/>
+   </vstab>
+
+   <hstab x="-3.597" y="-0.098" z="0.237"
+     chord="0.52" 
+     length="1.205" 
+     taper="0.5"
+     dihedral="180">
+     <stall aoa="0" width="0" peak="1.5"/>
+   </hstab>
+
+   <!-- Avant gauche -->
+   <gear x="3.603" y="1.043" z="-1.7" 
+    skid="1" 
+    compression="0.05"
+    spring="1.0" 
+    damp="0.2" 
+    sfric="0.5" 
+    dfric="0.4">
+    <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
+    <control-speed control="EXTEND" transition-time="7"/>
+    <control-output control="EXTEND" prop="/gear/gear[0]/position-norm"/>
+  </gear>
+
+  <!-- Avant droit -->
+  <gear x="3.603" y="-1.043" z="-1.7" 
+    skid="1" 
+    compression="0.05"
+    spring="1.0" 
+    damp="0.2" 
+    sfric="0.5" 
+    dfric="0.4">
+    <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
+    <control-speed control="EXTEND" transition-time="7"/>
+    <control-output control="EXTEND" prop="/gear/gear[1]/position-norm"/>
+  </gear>
+
+  <!-- Arriere gauche -->
+  <gear x="1.465" y="1.043" z="-1.75" 
+    skid="1" 
+    compression="0.05"
+    spring="1.0" 
+    damp="0.2" 
+    sfric="0.5" 
+    dfric="0.4">
+    <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
+    <control-speed control="EXTEND" transition-time="7"/>
+    <control-output control="EXTEND" prop="gear/gear[2]/position-norm"/>
+  </gear>
+
+  <!-- Arriere droit -->
+  <gear x="1.465" y="-1.043" z="-1.75" 
+    skid="1" 
+    compression="0.05"
+    spring="1.0" 
+    damp="0.2" 
+    sfric="0.5" 
+    dfric="0.4">
+    <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
+    <control-speed control="EXTEND" transition-time="7"/>
+    <control-output control="EXTEND" prop="gear/gear[3]/position-norm"/>
+  </gear>
+
+  <!-- Patte de queue -->
+  <gear x="-4.018" y="-0.183" z="-0.445"
+    skid="1"
+    compression="0.01"
+    spring="0.1"
+    sfric="1"
+    dfric="1">
+  </gear>
+
+  <tank x="4" y="0" z="-0.31" jet="1" capacity="493.0"/>
+
+  <weight x="0.5588" y=" 0.270" z="-1.8" mass-prop="/sim/weight[0]/weight-lb"/> <!-- left seat  -->
+  <weight x="0.5588" y="-0.236" z="-1.8" mass-prop="/sim/weight[1]/weight-lb"/> <!-- right seat -->
+
+  <ballast x="3" y=" 0.0" z="-0.5" mass="450"/>
+  <ballast x="2" y=" 1.1" z=" 1.1" mass="100"/>
+  <ballast x="2" y="-1.1" z=" 1.1" mass="50"/>
+
+  <thruster x="-0.75"  y="0" z="0" vx="-1" vy="0" vz="1" thrust="850">
+    <control-input axis="/sim/model/pushback/target-speed-fps" control="THROTTLE" src0="-1" src1="1" dst0="-1" dst1="1"/>
+  </thruster>
+
+  <thruster x="-0.75"  y="0" z="0" vx="0" vy="1" vz="0" thrust="300">
+    <control-input axis="/sim/model/pushback/target-speed-fps-y" control="THROTTLE" src0="-1" src1="1" dst0="-1" dst1="1"/>
+  </thruster>
+
+</airplane>
+
+
+
