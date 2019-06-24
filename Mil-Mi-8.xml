@@ -193,7 +193,7 @@
     dfric="1">
   </gear>
 
-  <tank x="2.39829" y="0" z="-0.996445" jet="1" capacity="493.0"/>
+  <tank x="2.39829" y="0" z="-0.996445" jet="1" capacity="981.0"/>
 
   <weight x="6.48141" y="-0.506127" z="-0.175444" mass-prop="/sim/weight[0]/weight-lb"/> <!-- left seat  -->
   <weight x="6.48141" y="0.506127" z="-0.175444" mass-prop="/sim/weight[1]/weight-lb"/> <!-- right seat -->
