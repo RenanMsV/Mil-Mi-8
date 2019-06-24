@@ -105,6 +105,19 @@
       </key>
     </help>
 
+    <weight n="0">
+      <name>Pilot</name>
+      <weight-lb>180</weight-lb>
+      <max-lb>200</max-lb>
+      <min-lb>130</min-lb>
+    </weight>
+    <weight n="1">
+      <name>Co-Pilot</name>
+      <weight-lb>180</weight-lb>
+      <max-lb>200</max-lb>
+      <min-lb>0</min-lb>
+    </weight>
+
   </sim>
 
   <controls>

@@ -195,8 +195,8 @@
 
   <tank x="2.39829" y="0" z="-0.996445" jet="1" capacity="493.0"/>
 
-  <weight x="0.5588" y=" 0.270" z="-1.8" mass-prop="/sim/weight[0]/weight-lb"/> <!-- left seat  -->
-  <weight x="0.5588" y="-0.236" z="-1.8" mass-prop="/sim/weight[1]/weight-lb"/> <!-- right seat -->
+  <weight x="6.48141" y="-0.506127" z="-0.175444" mass-prop="/sim/weight[0]/weight-lb"/> <!-- left seat  -->
+  <weight x="6.48141" y="0.506127" z="-0.175444" mass-prop="/sim/weight[1]/weight-lb"/> <!-- right seat -->
 
   <ballast x="3" y=" 0.0" z="-0.5" mass="450"/>
   <ballast x="2" y=" 1.1" z=" 1.1" mass="100"/>
