@@ -4,7 +4,7 @@
 
      2011 BARANGER Emmanuel First for test
      2011 JM-26 First really R44 FDM
-     2017 Re-used as R66 FDM
+     2019 Re-used as Mi8 FDM
    -->
 
    <airplane mass="1280">
@@ -154,60 +154,38 @@
      <stall aoa="0" width="0" peak="1.5"/>
    </hstab>
 
-   <!-- Avant gauche -->
-   <gear x="3.603" y="1.043" z="-1.7" 
+   <!-- Nose -->
+   <gear x="3.5521" y="0" z="-1.95" 
     skid="1" 
     compression="0.05"
     spring="1.0" 
     damp="0.2" 
     sfric="0.5" 
     dfric="0.4">
-    <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
-    <control-speed control="EXTEND" transition-time="7"/>
-    <control-output control="EXTEND" prop="/gear/gear[0]/position-norm"/>
   </gear>
 
-  <!-- Avant droit -->
-  <gear x="3.603" y="-1.043" z="-1.7" 
+  <!-- Left -->
+  <gear x="-0.685759" y="-2.23668" z="-1.65" 
     skid="1" 
     compression="0.05"
     spring="1.0" 
     damp="0.2" 
     sfric="0.5" 
     dfric="0.4">
-    <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
-    <control-speed control="EXTEND" transition-time="7"/>
-    <control-output control="EXTEND" prop="/gear/gear[1]/position-norm"/>
   </gear>
 
-  <!-- Arriere gauche -->
-  <gear x="1.465" y="1.043" z="-1.75" 
+  <!-- Right -->
+  <gear x="-0.685759" y="2.23668" z="-1.65" 
     skid="1" 
     compression="0.05"
     spring="1.0" 
     damp="0.2" 
     sfric="0.5" 
     dfric="0.4">
-    <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
-    <control-speed control="EXTEND" transition-time="7"/>
-    <control-output control="EXTEND" prop="gear/gear[2]/position-norm"/>
   </gear>
 
-  <!-- Arriere droit -->
-  <gear x="1.465" y="-1.043" z="-1.75" 
-    skid="1" 
-    compression="0.05"
-    spring="1.0" 
-    damp="0.2" 
-    sfric="0.5" 
-    dfric="0.4">
-    <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
-    <control-speed control="EXTEND" transition-time="7"/>
-    <control-output control="EXTEND" prop="gear/gear[3]/position-norm"/>
-  </gear>
-
-  <!-- Patte de queue -->
-  <gear x="-4.018" y="-0.183" z="-0.445"
+  <!-- Tail -->
+  <gear x="-10.2716" y="0" z="0.05267"
     skid="1"
     compression="0.01"
     spring="0.1"
