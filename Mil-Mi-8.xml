@@ -202,14 +202,6 @@
   <ballast x="2" y=" 1.1" z=" 1.1" mass="100"/>
   <ballast x="2" y="-1.1" z=" 1.1" mass="50"/>
 
-  <thruster x="-0.75"  y="0" z="0" vx="-1" vy="0" vz="1" thrust="850">
-    <control-input axis="/sim/model/pushback/target-speed-fps" control="THROTTLE" src0="-1" src1="1" dst0="-1" dst1="1"/>
-  </thruster>
-
-  <thruster x="-0.75"  y="0" z="0" vx="0" vy="1" vz="0" thrust="300">
-    <control-input axis="/sim/model/pushback/target-speed-fps-y" control="THROTTLE" src0="-1" src1="1" dst0="-1" dst1="1"/>
-  </thruster>
-
 </airplane>
 
 
