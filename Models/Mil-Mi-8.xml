@@ -8,8 +8,8 @@
 		<property>rotors/main/rpm</property>
 		<factor>1</factor>
 		<center>
-			<x-m>-2.47118</x-m>
-			<y-m>0.91352</y-m>
+			<x-m>-2.51283</x-m>
+			<y-m>0.0137</y-m>
 			<z-m>2.79121</z-m>
 		</center>
 		<axis>
@@ -21,12 +21,13 @@
 	<!-- Tail Rotor Animation -->
 	<animation>
 		<object-name>TailRotor</object-name>
+		<object-name>ShapeIndexedFaceSet.052</object-name>
 		<type>spin</type>
 		<property>rotors/tail/rpm</property>
 		<factor>1</factor>
 		<center>
 			<x-m>10.2588</x-m>
-			<y-m>0.23519</y-m>
+			<y-m>0</y-m>
 			<z-m>2.72059</z-m>
 		</center>
 		<axis>
