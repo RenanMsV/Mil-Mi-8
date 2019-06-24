@@ -155,7 +155,7 @@
    </hstab>
 
    <!-- Nose -->
-   <gear x="3.5521" y="0" z="-1.95" 
+   <gear x="5.43752" y="0" z="-2.09166" 
     skid="1" 
     compression="0.05"
     spring="1.0" 
@@ -165,7 +165,7 @@
   </gear>
 
   <!-- Left -->
-  <gear x="-0.685759" y="-2.23668" z="-1.65" 
+  <gear x="1.20694" y="-2.23668" z="-1.80386" 
     skid="1" 
     compression="0.05"
     spring="1.0" 
@@ -175,7 +175,7 @@
   </gear>
 
   <!-- Right -->
-  <gear x="-0.685759" y="2.23668" z="-1.65" 
+  <gear x="1.20694" y="2.23668" z="-1.80386" 
     skid="1" 
     compression="0.05"
     spring="1.0" 
@@ -185,7 +185,7 @@
   </gear>
 
   <!-- Tail -->
-  <gear x="-10.2716" y="0" z="0.05267"
+  <gear x="-8.36946" y="0" z="-0.05856"
     skid="1"
     compression="0.01"
     spring="0.1"
@@ -193,7 +193,7 @@
     dfric="1">
   </gear>
 
-  <tank x="4" y="0" z="-0.31" jet="1" capacity="493.0"/>
+  <tank x="2.39829" y="0" z="-0.996445" jet="1" capacity="493.0"/>
 
   <weight x="0.5588" y=" 0.270" z="-1.8" mass-prop="/sim/weight[0]/weight-lb"/> <!-- left seat  -->
   <weight x="0.5588" y="-0.236" z="-1.8" mass-prop="/sim/weight[1]/weight-lb"/> <!-- right seat -->
