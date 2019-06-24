@@ -1,39 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PropertyList>
-	<path>Mil-Mi-8.ac</path>
-	<!-- Main Rotor Animation -->
-	<animation>
-		<object-name>MainRotor</object-name>
-		<type>spin</type>
-		<property>rotors/main/rpm</property>
-		<factor>1</factor>
-		<center>
-			<x-m>-2.51283</x-m>
-			<y-m>0.0137</y-m>
-			<z-m>2.79121</z-m>
-		</center>
-		<axis>
-			<x>0</x>
-			<y>0</y>
-			<z>1</z>
-		</axis>
-	</animation>
-	<!-- Tail Rotor Animation -->
-	<animation>
-		<object-name>TailRotor</object-name>
-		<object-name>ShapeIndexedFaceSet.052</object-name>
-		<type>spin</type>
-		<property>rotors/tail/rpm</property>
-		<factor>1</factor>
-		<center>
-			<x-m>10.2588</x-m>
-			<y-m>0</y-m>
-			<z-m>2.72059</z-m>
-		</center>
-		<axis>
-			<x>0</x>
-			<y>1</y>
-			<z>0</z>
-		</axis>
-	</animation>
+  <path>Mil-Mi-8.ac</path>
+  <!-- Main Rotor Animation -->
+  <animation>
+    <object-name>MainRotor</object-name>
+    <type>spin</type>
+    <property>rotors/main/rpm</property>
+    <factor>1</factor>
+    <condition>
+      <not>
+        <property>/sim/crashed</property>
+      </not>
+    </condition>
+    <center>
+      <x-m>-2.51283</x-m>
+      <y-m>0.0137</y-m>
+      <z-m>2.79121</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>0</y>
+      <z>1</z>
+    </axis>
+  </animation>
+  <!-- Tail Rotor Animation -->
+  <animation>
+    <object-name>TailRotor</object-name>
+    <object-name>ShapeIndexedFaceSet.052</object-name>
+    <type>spin</type>
+    <property>rotors/tail/rpm</property>
+    <factor>1</factor>
+    <condition>
+      <not>
+        <property>/sim/crashed</property>
+      </not>
+    </condition>
+    <center>
+      <x-m>10.2588</x-m>
+      <y-m>0</y-m>
+      <z-m>2.72059</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
 </PropertyList>
