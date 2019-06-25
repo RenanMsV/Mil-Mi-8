@@ -42,6 +42,7 @@
         <state type="int">0</state>
         <engine type="float">0.0</engine>
         <rotor-step-deg type="float">-1.0</rotor-step-deg>
+        <reflection-enabled type="bool" userarchive="y">true</reflection-enabled>
       </Mi8>
     </model>
 

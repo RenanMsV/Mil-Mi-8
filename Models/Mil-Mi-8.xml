@@ -15,7 +15,7 @@
         <wrap-t>repeat</wrap-t>
         <internal-format>normalized</internal-format>
       </texture>
-      <reflection-enabled type="int">1</reflection-enabled>
+      <reflection-enabled type="int"><use>/sim/model/Mi8/reflection-enabled</use></reflection-enabled>
       <reflect-map-enabled type="int">1</reflect-map-enabled>
       <reflection-correction type="float">-0.5</reflection-correction>
       <reflection-fresnel-factor type="float">1.0</reflection-fresnel-factor>

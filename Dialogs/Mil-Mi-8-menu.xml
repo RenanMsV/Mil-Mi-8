@@ -21,6 +21,7 @@
       </item>
       <item>
         <label>Blades visible</label>
+        <enabled>false</enabled>
         <binding>
           <command>nasal</command>
           <script>var p = "rotors/main/bladesvisible";
@@ -30,6 +31,7 @@
       </item>
       <item>
         <label>Pilot/copilot visible</label>
+        <enabled>false</enabled>
         <binding>
           <command>nasal</command>
           <script>var p = "/sim/model/Mi8/pilot-visible";
@@ -56,6 +58,13 @@
         <binding>
           <command>nasal</command>
           <script>Mi8.immat_dialog.toggle()</script>
+        </binding>
+      </item>
+      <item>
+        <label>Toggle Reflection Effect</label>
+        <binding>
+          <command>property-toggle</command>
+          <property>sim/model/Mi8/reflection-enabled</property>
         </binding>
       </item>
     </menu>
