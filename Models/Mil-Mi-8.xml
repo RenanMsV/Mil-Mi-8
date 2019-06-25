@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PropertyList>
   <path>Mil-Mi-8.ac</path>
-
   <effect>
     <inherits-from>Effects/model-combined-deferred</inherits-from>
     <object-name>Fuselage</object-name>
@@ -41,7 +40,6 @@
       <tangent type="int">6</tangent>
       <binormal type="int">7</binormal>
     </generate>
-
     <technique n="4">
       <pass>
         <program>
@@ -56,7 +54,6 @@
         </program>
       </pass>
     </technique>
-
     <technique n="7">
       <pass>
         <program>
@@ -89,7 +86,6 @@
     ### END NORMALMAP INCLUDE ###
     ############################# -->
   </effect>
-
   <!-- Main Rotor Animation -->
   <animation>
     <object-name>MainRotor</object-name>
@@ -135,4 +131,93 @@
       <z>0</z>
     </axis>
   </animation>
+  <!-- Left Tyre Spin Animation -->
+  <animation>
+    <object-name>ShapeIndexedFaceSet.019</object-name>
+    <type>spin</type>
+    <property>gear/gear[1]/rollspeed-ms</property>
+    <factor>8</factor>
+    <condition>
+      <not>
+        <property>/sim/crashed</property>
+      </not>
+    </condition>
+    <center>
+      <x-m>-1.20799</x-m>
+      <y-m>-2.2365</y-m>
+      <z-m>-1.39815</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>-1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+  <!-- Right Tyre Spin Animation -->
+  <animation>
+    <object-name>ShapeIndexedFaceSet.013</object-name>
+    <type>spin</type>
+    <property>gear/gear[2]/rollspeed-ms</property>
+    <factor>8</factor>
+    <condition>
+      <not>
+        <property>/sim/crashed</property>
+      </not>
+    </condition>
+    <center>
+      <x-m>-1.20799</x-m>
+      <y-m>2.25218</y-m>
+      <z-m>-1.39815</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>-1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+  <!-- Nose Tyre Steering Animation -->
+  <animation>
+    <object-name>ShapeIndexedFaceSet</object-name>
+    <object-name>ShapeIndexedFaceSet.003</object-name>
+    <object-name>ShapeIndexedFaceSet.005</object-name>
+    <object-name>ShapeIndexedFaceSet.008</object-name>
+    <object-name>ShapeIndexedFaceSet.033</object-name>
+    <type>rotate</type>
+    <property>controls/gear/steering</property>
+    <factor>-30</factor>
+    <center>
+      <x-m>-5.74533</x-m>
+      <y-m>0.00034</y-m>
+      <z-m>-1.60287</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>0</y>
+      <z>1</z>
+    </axis>
+  </animation>
+  <!-- Nose Tyre Spin Animation -->
+  <animation>
+    <object-name>ShapeIndexedFaceSet</object-name>
+    <object-name>ShapeIndexedFaceSet.003</object-name>
+    <type>spin</type>
+    <property>gear/gear[0]/rollspeed-ms</property>
+    <factor>10</factor>
+    <condition>
+      <not>
+        <property>/sim/crashed</property>
+      </not>
+    </condition>
+    <center>
+      <x-m>-5.43964</x-m>
+      <y-m>0.00033</y-m>
+      <z-m>-1.80979</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>-1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
 </PropertyList>

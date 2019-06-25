@@ -156,32 +156,38 @@
 
    <!-- Nose -->
    <gear x="5.43752" y="0" z="-2.09166" 
-    skid="1" 
+    skid="0" 
     compression="0.05"
     spring="1.0" 
     damp="0.2" 
     sfric="0.5" 
     dfric="0.4">
+    <control-input axis="/controls/flight/rudder" control="STEER" square="true" src0="-1" dst0="-1.0" src1="1" dst1="1.0"/>
+    <control-output control="STEER" prop="controls/gear/steering"/>
   </gear>
 
   <!-- Left -->
-  <gear x="1.20694" y="-2.23668" z="-1.80386" 
-    skid="1" 
+  <gear x="1.20751" y="2.23668" z="-1.80386" 
+    skid="0" 
     compression="0.05"
     spring="1.0" 
     damp="0.2" 
     sfric="0.5" 
     dfric="0.4">
+    <control-input axis="/controls/gear/brake-left" control="BRAKE"/>
+    <control-input axis="/controls/gear/brake-parking" control="BRAKE"/>
   </gear>
 
   <!-- Right -->
-  <gear x="1.20694" y="2.23668" z="-1.80386" 
-    skid="1" 
+  <gear x="1.20751" y="-2.25243" z="-1.80386" 
+    skid="0" 
     compression="0.05"
     spring="1.0" 
     damp="0.2" 
     sfric="0.5" 
     dfric="0.4">
+    <control-input axis="/controls/gear/brake-right" control="BRAKE"/>
+    <control-input axis="/controls/gear/brake-parking" control="BRAKE"/>
   </gear>
 
   <!-- Tail -->
@@ -195,8 +201,8 @@
 
   <tank x="2.39829" y="0" z="-0.996445" jet="1" capacity="981.0"/>
 
-  <weight x="6.48141" y="-0.506127" z="-0.175444" mass-prop="/sim/weight[0]/weight-lb"/> <!-- left seat  -->
-  <weight x="6.48141" y="0.506127" z="-0.175444" mass-prop="/sim/weight[1]/weight-lb"/> <!-- right seat -->
+  <weight x="6.48141" y="0.506127" z="-0.175444" mass-prop="/sim/weight[0]/weight-lb"/> <!-- left seat  -->
+  <weight x="6.48141" y="-0.506127" z="-0.175444" mass-prop="/sim/weight[1]/weight-lb"/> <!-- right seat -->
 
   <ballast x="3" y=" 0.0" z="-0.5" mass="450"/>
   <ballast x="2" y=" 1.1" z=" 1.1" mass="100"/>
