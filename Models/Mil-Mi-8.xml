@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PropertyList>
   <path>Mil-Mi-8.ac</path>
+
+  <model>
+    <path>Aircraft/Mil-Mi-8/Models/Interior/Cockpit/Mil-Mi-8-cockpit.xml</path>
+  </model>
+
   <effect>
     <inherits-from>Effects/model-combined-deferred</inherits-from>
     <object-name>Fuselage</object-name>
