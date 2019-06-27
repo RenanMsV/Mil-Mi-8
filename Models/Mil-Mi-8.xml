@@ -353,6 +353,7 @@
     <type>translate</type>
     <object-name>Door</object-name>
     <object-name>DoorGlass</object-name>
+    <object-name>DoorGlassExt</object-name>
     <property>controls/switches/fuselage/left-door-y/position-norm</property>
     <factor>-.06</factor>
     <condition>
@@ -378,6 +379,7 @@
     <type>translate</type>
     <object-name>Door</object-name>
     <object-name>DoorGlass</object-name>
+    <object-name>DoorGlassExt</object-name>
     <property>controls/switches/fuselage/left-door-x/position-norm</property>
     <factor>.8</factor>
     <condition>
