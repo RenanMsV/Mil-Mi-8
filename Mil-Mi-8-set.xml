@@ -4,7 +4,7 @@
 
   <sim>
 
-    <description>Mil-Mi-8 (YASIM) - ALPHA</description>
+    <description>Mil-Mi-8T Hip-C (YASIM) - ALPHA</description>
     <long-description>The Mil Mi-8 is a medium twin-turbine helicopter, originally designed by the Soviet Union, and now produced by Russia. In addition to its most common role as a transport helicopter, the Mi-8 is also used as an airborne command post, armed gunship, and reconnaissance platform. Along with the related, more powerful Mil Mi-17, the Mi-8 is among the world's most-produced helicopters, used by over 50 countries. As of 2015, it is the third most common operational military aircraft in the world.</long-description>
     <author>Kaito, RenanMsV, manilov.ap (3D), BARANGER Emmanuel (Systems), AUBERGER Jean Michel (FDM), BACON Guillaume (Sounds and Simulation Config)</author>
     <aircraft-version>0.1</aircraft-version>
