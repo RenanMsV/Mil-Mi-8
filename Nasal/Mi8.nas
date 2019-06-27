@@ -18,6 +18,11 @@ var NoFuel=props.globals.getNode("/engines/engine/out-of-fuel",1);
 var FHmeter = aircraft.timer.new("/instrumentation/clock/flight-meter-sec", 10);
 FHmeter.stop();
 
+# doors
+var cargo_door = aircraft.door.new("controls/switches/fuselage/cargo-door/", 7);
+props.globals.getNode("controls/switches/fuselage/left-door-x/position-norm", 1).setDoubleValue(0);
+props.globals.getNode("controls/switches/fuselage/left-door-y/position-norm", 1).setDoubleValue(0);
+
 setlistener("/sim/signals/fdm-initialized", func {
     Fuel_Density=props.globals.getNode("/consumables/fuel/tank/density-ppg").getValue();
     setprop("/instrumentation/clock/flight-meter-hour",0);
