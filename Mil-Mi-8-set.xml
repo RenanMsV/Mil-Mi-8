@@ -64,7 +64,7 @@
       <config>
         <pitch-offset-deg>2.5</pitch-offset-deg>
         <x-offset-m archive="y">-0.54</x-offset-m> <!-- right/left -->
-        <y-offset-m archive="y">-0.0639</y-offset-m> <!-- up/down -->
+        <y-offset-m archive="y">0</y-offset-m> <!-- up/down -->
         <z-offset-m archive="y">-6.275</z-offset-m> <!-- aft/fore -->
       </config>
     </view>

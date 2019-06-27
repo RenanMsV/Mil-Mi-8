@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PropertyList>
   <path>Mil-Mi-8.ac</path>
+
+  <model>
+    <path>Aircraft/Mil-Mi-8/Models/Interior/Cockpit/Mil-Mi-8-cockpit.xml</path>
+  </model>
+
   <effect>
     <inherits-from>Effects/model-combined-deferred</inherits-from>
     <object-name>Fuselage</object-name>
@@ -85,6 +90,68 @@
     <!-- ########################
     ### END NORMALMAP INCLUDE ###
     ############################# -->
+  </effect>
+  <effect>
+    <inherits-from>Effects/model-combined-transparent</inherits-from>
+    <object-name>DoorGlassExt</object-name>
+    <object-name>GlassExt</object-name>
+    <parameters>
+      <rain-enabled type="int">1</rain-enabled>
+      <normalmap-enabled type="int">0</normalmap-enabled>
+      <lightmap-enabled type="int">0</lightmap-enabled>
+      <reflection-enabled type="int">1</reflection-enabled>
+      <reflection-correction type="float">1</reflection-correction>
+      <reflect-map-enabled type="int">0</reflect-map-enabled>
+      <reflection-fresnel type="float">0</reflection-fresnel>
+      <reflection-rainbow type="float">-.1</reflection-rainbow>
+      <reflection-noise type="float">-1</reflection-noise>
+      <reflection-dynamic type="int">1</reflection-dynamic>
+      <texture n="5">
+        <type>cubemap</type>
+        <images>
+          <positive-x>Aircraft/Generic/Effects/fgfs-sky2/1.png</positive-x>
+          <negative-x>Aircraft/Generic/Effects/fgfs-sky2/4.png</negative-x>
+          <positive-y>Aircraft/Generic/Effects/fgfs-sky2/2.png</positive-y>
+          <negative-y>Aircraft/Generic/Effects/fgfs-sky2/3.png</negative-y>
+          <positive-z>Aircraft/Generic/Effects/fgfs-sky2/6.png</positive-z>
+          <negative-z>Aircraft/Generic/Effects/fgfs-sky2/5.png</negative-z>
+        </images>
+      </texture>
+      <ambient-correction type="float">1</ambient-correction>
+      <rendering-hint>transparent</rendering-hint>
+      <transparent>true</transparent>
+    </parameters>
+  </effect>
+  <effect>
+    <inherits-from>Effects/model-combined-transparent</inherits-from>
+    <object-name>Glass</object-name>
+    <object-name>DoorGlass</object-name>
+    <parameters>
+      <rain-enabled type="int">1</rain-enabled>
+      <normalmap-enabled type="int">0</normalmap-enabled>
+      <lightmap-enabled type="int">0</lightmap-enabled>
+      <reflection-enabled type="int">1</reflection-enabled>
+      <reflection-correction type="float">1</reflection-correction>
+      <reflect-map-enabled type="int">0</reflect-map-enabled>
+      <reflection-fresnel type="float">0.0</reflection-fresnel>
+      <reflection-rainbow type="float">-.1</reflection-rainbow>
+      <reflection-noise type="float">-.1</reflection-noise>
+      <reflection-dynamic type="int">1</reflection-dynamic>
+      <texture n="5">
+        <type>cubemap</type>
+        <images>
+          <positive-x>Aircraft/Generic/Effects/fgfs-sky2/1.png</positive-x>
+          <negative-x>Aircraft/Generic/Effects/fgfs-sky2/4.png</negative-x>
+          <positive-y>Aircraft/Generic/Effects/fgfs-sky2/2.png</positive-y>
+          <negative-y>Aircraft/Generic/Effects/fgfs-sky2/3.png</negative-y>
+          <positive-z>Aircraft/Generic/Effects/fgfs-sky2/6.png</positive-z>
+          <negative-z>Aircraft/Generic/Effects/fgfs-sky2/5.png</negative-z>
+        </images>
+      </texture>
+      <ambient-correction type="float">1</ambient-correction>
+      <rendering-hint>transparent</rendering-hint>
+      <transparent>true</transparent>
+    </parameters>
   </effect>
   <!-- Main Rotor Animation -->
   <animation>
@@ -219,5 +286,223 @@
       <z>0</z>
     </axis>
   </animation>
-
+  <!-- BackDoorLeft animation -->
+  <animation>
+    <type>rotate</type>
+    <object-name>BackDoorLeft</object-name>
+    <property>controls/switches/fuselage/cargo-door/position-norm</property>
+    <factor>90</factor>
+    <condition>
+      <not>
+        <greather-than>
+          <property>controls/switches/fuselage/cargo-door/position-norm</property>
+          <value type="double">0</value>
+        </greather-than>
+      </not>
+    </condition>
+    <center>
+      <x-m>-0.03183</x-m>
+      <y-m>-1.20911</y-m>
+      <z-m>-0.33518</z-m>
+    </center>
+    <axis>
+      <x>-.3</x>
+      <y>0</y>
+      <z>-1</z>
+    </axis>
+  </animation>
+  <!-- BackDoorRight animation -->
+  <animation>
+    <type>rotate</type>
+    <object-name>BackDoorRight</object-name>
+    <property>controls/switches/fuselage/cargo-door/position-norm</property>
+    <factor>-90</factor>
+    <condition>
+      <not>
+        <greather-than>
+          <property>controls/switches/fuselage/cargo-door/position-norm</property>
+          <value type="double">0</value>
+        </greather-than>
+      </not>
+    </condition>
+    <center>
+      <x-m>-0.03183</x-m>
+      <y-m>1.20911</y-m>
+      <z-m>-0.33518</z-m>
+    </center>
+    <axis>
+      <x>-.3</x>
+      <y>0</y>
+      <z>-1</z>
+    </axis>
+  </animation>
+  <animation>
+    <type>pick</type>
+    <object-name>BackDoorRight</object-name>
+    <object-name>BackDoorLeft</object-name>
+    <action>
+      <button>0</button>
+      <binding>
+        <command>nasal</command>
+        <script>Mi8.cargo_door.toggle();</script>
+      </binding>
+    </action>
+  </animation>
+  <!-- Left Door animation -->
+  <animation>
+    <type>translate</type>
+    <object-name>Door</object-name>
+    <object-name>DoorGlass</object-name>
+    <object-name>DoorGlassExt</object-name>
+    <property>controls/switches/fuselage/left-door-y/position-norm</property>
+    <factor>-.06</factor>
+    <condition>
+      <not>
+        <greather-than>
+          <property>controls/switches/fuselage/left-door-y/position-norm</property>
+          <value type="double">0</value>
+        </greather-than>
+      </not>
+    </condition>
+    <center>
+      <x-m>-5.17369</x-m>
+      <y-m>-1.13036</y-m>
+      <z-m>-0.37822</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+  <animation>
+    <type>translate</type>
+    <object-name>Door</object-name>
+    <object-name>DoorGlass</object-name>
+    <object-name>DoorGlassExt</object-name>
+    <property>controls/switches/fuselage/left-door-x/position-norm</property>
+    <factor>.8</factor>
+    <condition>
+      <not>
+        <greather-than>
+          <property>controls/switches/fuselage/left-door-x/position-norm</property>
+          <value type="double">0</value>
+        </greather-than>
+      </not>
+    </condition>
+    <center>
+      <x-m>-5.17369</x-m>
+      <y-m>-1.13036</y-m>
+      <z-m>-0.37822</z-m>
+    </center>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+  <animation>
+    <type>pick</type>
+    <object-name>Door</object-name>
+    <action>
+      <button>0</button>
+      <binding>
+        <condition>
+          <not>
+            <property>controls/switches/fuselage/left-door-y/position-norm</property>
+          </not>
+        </condition>
+        <command>property-interpolate</command>
+        <property>controls/switches/fuselage/left-door-y/position-norm</property>
+        <value type="double">1</value>
+        <rate>0.5</rate>
+      </binding>
+      <binding>
+        <condition>
+          <property>controls/switches/fuselage/left-door-y/position-norm</property>
+        </condition>
+        <command>property-interpolate</command>
+        <property>controls/switches/fuselage/left-door-y/position-norm</property>
+        <value type="double">0</value>
+        <rate>0.5</rate>
+      </binding>
+    </action>
+    <action>
+      <button>3</button>
+      <binding>
+        <condition>
+          <property>controls/switches/fuselage/left-door-y/position-norm</property>
+          <not>
+            <property>controls/switches/fuselage/left-door-x/position-norm</property>
+          </not>
+        </condition>
+        <command>property-interpolate</command>
+        <property>controls/switches/fuselage/left-door-x/position-norm</property>
+        <value type="double">1</value>
+        <rate>0.5</rate>
+      </binding>
+    </action>
+    <action>
+      <button>4</button>
+      <binding>
+        <condition>
+          <property>controls/switches/fuselage/left-door-x/position-norm</property>
+        </condition>
+        <command>property-interpolate</command>
+        <property>controls/switches/fuselage/left-door-x/position-norm</property>
+        <value type="double">0</value>
+        <rate>0.5</rate>
+      </binding>
+    </action>
+  </animation>
+  <animation>
+    <type>select</type>
+    <object-name>GlassExt</object-name>
+    <object-name>DoorGlassExt</object-name>
+    <condition>
+      <not>
+        <property>sim/current-view/internal</property>
+      </not>
+    </condition>
+  </animation>
+  <animation>
+    <type>select</type>
+    <object-name>Glass</object-name>
+    <object-name>DoorGlass</object-name>
+    <condition>
+      <property>sim/current-view/internal</property>
+    </condition>
+  </animation>
+  <!-- Explosion fire particles effect -->
+  <model>
+    <name>explosion</name>
+    <path>Aircraft/Mil-Mi-8/Models/Exterior/Explosion/explosion.xml</path>
+    <offsets>
+      <x-m>0.0</x-m>
+      <y-m>0.0</y-m>
+      <z-m>-2.0</z-m>
+    </offsets>
+  </model>
+  <animation>
+    <object-name>explosion</object-name>
+    <type>rotate</type>
+    <property>/orientation/model/roll-deg</property>
+    <factor>1</factor>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+  <animation>
+    <object-name>explosion</object-name>
+    <type>rotate</type>
+    <property>/orientation/model/pitch-deg</property>
+    <factor>-1</factor>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
 </PropertyList>

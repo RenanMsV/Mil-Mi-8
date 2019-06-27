@@ -1,8 +1,12 @@
 ############################################################
-##  Adapted from R22.nas for Mi8 by Clement DE L'HAMAIDE  ##
+##  Adapted from R22.nas for R44 by Clement DE L'HAMAIDE  ##
 ##                  Date : 05/05/2011                     ##
 ##          Trying to use it again in the Mi8             ##
 ############################################################
+
+# Few notes about this
+# How this works? Yasim doesnt have an default engine system, so thats why we need to create our own.
+# How this helicopter engine system works? We have 2 systems, the engine system (/engines/engine/rpm), which is there just to create an illusion of an engine running with values, sounds and so... and the rotor system, which seems to be the one who drives the helicopter (/rotor/main/rpm), if the rotor rpm increases the helicopter power increases, if it gets too low the helicopter will fall like a rock. Also rotor diameter seems to increase its power too.
 
 var RPM_arm=props.globals.getNode("/instrumentation/alerts/rpm",1);
 var last_time = 0;
@@ -17,6 +21,11 @@ var NoFuel=props.globals.getNode("/engines/engine/out-of-fuel",1);
 
 var FHmeter = aircraft.timer.new("/instrumentation/clock/flight-meter-sec", 10);
 FHmeter.stop();
+
+# doors
+var cargo_door = aircraft.door.new("controls/switches/fuselage/cargo-door/", 7);
+props.globals.getNode("controls/switches/fuselage/left-door-x/position-norm", 1).setDoubleValue(0);
+props.globals.getNode("controls/switches/fuselage/left-door-y/position-norm", 1).setDoubleValue(0);
 
 setlistener("/sim/signals/fdm-initialized", func {
     Fuel_Density=props.globals.getNode("/consumables/fuel/tank/density-ppg").getValue();
@@ -110,48 +119,37 @@ setlistener("/controls/electric/key", func(key){
     if(key == 0)kill_engine();
 },0,0);
 
-setlistener("controls/engines/engine[0]/clutch", func(clutch){
-    var clutch= clutch.getBoolValue();
-    if(clutch and props.globals.getNode("/engines/engine/running",1).getBoolValue()){
-      setprop("/engines/engine/clutch-engaged",1);
-    }else{
-      setprop("/engines/engine/clutch-engaged",0);
-    }
-},0,0);
-
-
-
-
-
 ##############################################
 ######### AUTOSTART / AUTOSHUTDOWN ###########
 ##############################################
 
 setlistener("/sim/model/start-idling", func(idle){
-    var run= idle.getBoolValue();
-    if(run){
-    Startup();
-    }else{
-    Shutdown();
-    }
+    if (idle.getBoolValue()) Startup(); else Shutdown();
 },0,0);
 
 var Startup = func {
   setprop("/controls/electric/battery-switch",1);
   setprop("/controls/electric/engine/generator",1);
   setprop("/controls/electric/key",4);
-  setprop("/engines/engine/rpm",2700);
-  setprop("/engines/engine/running",1);
-  setprop("/controls/engines/engine/clutch",1);
+  setprop("/controls/engines/engine[0]/clutch",1);
+  props.globals.getNode("/controls/engines/engine[0]/starter").setBoolValue(1);
+  setprop("engines/engine[0]/running", 1);
+  gui.popupTip("Engines starting...", 4);
 }
+
+setlistener("/controls/engines/engine/starter", func(idle){
+    var run= idle.getBoolValue();
+    if (!run) return;
+    setprop("/engines/engine/clutch-engaged", 1);
+},0,0);
 
 var Shutdown = func {
   setprop("/controls/electric/battery-switch",0);
   setprop("/controls/electric/engine/generator",0);
   setprop("/controls/electric/key",0);
-  setprop("/engines/engine/rpm",0);
-  setprop("/engines/engine/running",0);
-  setprop("/controls/engines/engine/clutch",0);
+  setprop("/controls/engines/engine[0]/clutch",0);
+  props.globals.getNode("/controls/engines/engine[0]/starter").setBoolValue(0);
+  gui.popupTip("Engines shutdown, you can brake the rotor by holding 'r'", 4);
 }
 
 ###############################################
@@ -240,13 +238,13 @@ var update_systems = func {
 
         if(getprop("/engines/engine/amp-v") > 0){
             if(getprop("/engines/engine/clutch-engaged")){
-            interpolate("/rotors/main/rpm", 2700 * throttle, 0.9);
-            interpolate("/rotors/tail/rpm", 2700 * throttle, 0.9);
+            interpolate("/rotors/main/rpm", 2700 * throttle, 7); # .9
+            interpolate("/rotors/tail/rpm", 2700 * throttle, 7); # .9
             }else{
             interpolate("/rotors/main/rpm", 0, 0.2);
             interpolate("/rotors/tail/rpm", 0, 0.2);
             }
-            interpolate("/engines/engine/rpm", 2700 * throttle, 0.8);
+            interpolate("/engines/engine/rpm", 2700 * throttle, 7); # 0.8
         } else {
             if(!getprop("/controls/engines/engine/generator") and getprop("/engines/engine/amp-v") < 2){
             setprop("/engines/engine/clutch-engaged",0);
@@ -257,9 +255,9 @@ var update_systems = func {
 	interpolate("oilpressure",0,0.6);
 	interpolate("oiltemp",0,20);
 	
-	  interpolate("/engines/engine/rpm", 0, 0.8);
-	  interpolate("/rotors/main/rpm", 0, 0.4);
-	  interpolate("/rotors/tail/rpm", 0, 0.4);
+	  interpolate("/engines/engine/rpm", 0, 7); # 0.8
+	  interpolate("/rotors/main/rpm", 0, 7); # .4
+	  interpolate("/rotors/tail/rpm", 0, 7); # .4
       setprop("/Mi8/engines/engine[0]/mp-pressure",1);
 	}
 	

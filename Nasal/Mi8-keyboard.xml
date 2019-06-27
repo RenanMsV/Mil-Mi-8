@@ -29,29 +29,6 @@
     </binding>
   </key>
 
-  <key n="100">
-    <name>d</name>
-    <desc>Close pilot door</desc>
-    <binding>
-      <command>nasal</command>
-      <script>
-      setprop("/instrumentation/doors/Rcrew/position-norm",0);
-      </script>
-    </binding>
-  </key>
-
-  <key n="82">
-    <name>R</name>
-    <desc>Toggle rotor brake</desc>
-    <binding>
-      <command>nasal</command>
-      <script>
-        var p = "/controls/rotor/brake";
-        setprop(p, !getprop(p));
-      </script>
-    </binding>
-  </key>
-
   <key n="114">
     <name>r</name>
     <desc>Apply rotor brake</desc>
@@ -65,6 +42,15 @@
         <script>interpolate("/controls/rotor/brake", 0.0, 2)</script>
       </binding>
     </mod-up>
+  </key>
+
+  <key n="115">
+    <name>s</name>
+    <desc>Fire Starter on Selected Engine(s)</desc>
+    <binding>
+      <command>nasal</command>
+      <script>#null</script>
+    </binding>
   </key>
 
   <key n="125">
