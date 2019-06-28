@@ -7,18 +7,18 @@
      2019 Re-used as Mi8 FDM
    -->
 
-   <airplane mass="1280">
+   <airplane mass="14991">
 
     <approach speed="47" aoa="16">
       <control-setting axis="/controls/engines/engine[0]/throttle" value="0.3"/>
     </approach>
 
-    <cruise speed="125" alt="0">
+    <cruise speed="123" alt="0">
       <control-setting axis="/controls/engines/engine[0]/throttle" value="1.0"/>
     </cruise>
 
     <rotor name="main" 
-     x="2.218" y="0.0" z="1.605" 
+     x="2.51281" y="0.0" z="2.69651" 
      nx="0.05" ny="0" nz="1"
      fx="0.99" fy="0" fz="-0.043" 
      ccw="1"
@@ -29,12 +29,12 @@
      maxcyclicele="9.5"
      mincyclicail="-2.5"
      maxcyclicail="2.7"
-     diameter="10.1"
+     diameter="21.3"
      numblades="2"
      weightperblade="60"
      relbladecenter="0.5"
      dynamic="1"
-     rpm="495"
+     rpm="694"
      rellenflaphinge="0.2"
      delta3="0.0"
      delta=".25"
@@ -74,13 +74,13 @@
    </rotor>
 
    <rotor name="tail"
-     x="-3.609" y="0.362" z="0.395"
+     x="-10.25852" y="0.362" z="2.71945"
      nx="0.0" ny="-1" nz="0.0"
      fx="1" fy="0" fz="0"
      ccw="1"
      maxcollective="24"
      mincollective="-5"
-     diameter="1.47"
+     diameter="3.9"
      numblades="2"
      weightperblade="1"
      relbladecenter="0.55"
@@ -111,10 +111,10 @@
      <control-input axis="/controls/flight/fcs/tail-rotor/throttle" control="COLLECTIVE" src0="-1.0" src1="1.0" dst0="-1.0" dst1="1.0"/>
    </rotor>
 
-   <rotorgear max-power-engine="380"
+   <rotorgear max-power-engine="3200"
      max-power-rotor-brake="50"
-     rotorgear-friction="0.5"
-     engine-prop-factor="0.005"
+     rotorgear-friction="0.0"
+     engine-prop-factor="0.0"
      engine-accel-limit="3"
      yasimdragfactor="10"
      yasimliftfactor="140">
@@ -126,10 +126,10 @@
    <cockpit x="3.405" y="0.252" z="-0.140"/>
 
    <!-- Fuse -->
-   <fuselage ax="4.538" ay="0" az="-0.759" bx=" 0.594" by="0" bz="-0.534" width="1.361" taper="0.5" midpoint="0.35"/>
+   <fuselage ax="4.538" ay="0" az="-0.759" bx="0.594" by="0" bz="-0.534" width="1.361" taper="0.5" midpoint="0.35"/>
    <fuselage ax="1.751" ay="0" az="-0.069" bx="-3.678" by="0" bz=" 0.352" width="0.380" taper="0.5" midpoint="0.00"/>
 
-   <vstab x="-3.589" y="-0.182" z="0.320"
+   <vstab x="-9.84237" y="0" z="1.80941"
      chord="0.510" 
      length="1.080" 
      taper="0.5" 
@@ -137,7 +137,7 @@
      <stall aoa="16" width="4" peak="1.5"/>
    </vstab>
 
-   <vstab x="-3.589" y="-0.182" z="0.320"
+   <vstab x="-9.83575" y="0" z="1.80633"
      chord="0.510" 
      length="0.700" 
      taper="0.6"
@@ -156,36 +156,24 @@
 
    <!-- Nose -->
    <gear x="5.43752" y="0" z="-2.09166" 
-    skid="0" 
-    compression="0.05"
-    spring="1.0" 
-    damp="0.2" 
-    sfric="0.5" 
-    dfric="0.4">
+    compression="0.2" 
+    upx="-0.2" upy="0" upz="1">
     <control-input axis="/controls/flight/rudder" control="STEER" square="true" src0="-1" dst0="-1.0" src1="1" dst1="1.0"/>
     <control-output control="STEER" prop="controls/gear/steering"/>
   </gear>
 
   <!-- Left -->
   <gear x="1.20751" y="2.23668" z="-1.80386" 
-    skid="0" 
-    compression="0.05"
-    spring="1.0" 
-    damp="0.2" 
-    sfric="0.5" 
-    dfric="0.4">
+    compression="0.2" 
+    upx="0" upy="-0.2" upz="1">
     <control-input axis="/controls/gear/brake-left" control="BRAKE"/>
     <control-input axis="/controls/gear/brake-parking" control="BRAKE"/>
   </gear>
 
   <!-- Right -->
   <gear x="1.20751" y="-2.25243" z="-1.80386" 
-    skid="0" 
-    compression="0.05"
-    spring="1.0" 
-    damp="0.2" 
-    sfric="0.5" 
-    dfric="0.4">
+    compression="0.2" 
+    upx="0" upy="0.2" upz="1">
     <control-input axis="/controls/gear/brake-right" control="BRAKE"/>
     <control-input axis="/controls/gear/brake-parking" control="BRAKE"/>
   </gear>
@@ -193,20 +181,19 @@
   <!-- Tail -->
   <gear x="-8.36946" y="0" z="-0.05856"
     skid="1"
-    compression="0.01"
-    spring="0.1"
-    sfric="1"
-    dfric="1">
+    compression="0.01">
   </gear>
 
-  <tank x="2.39829" y="0" z="-0.996445" jet="1" capacity="981.0"/>
+  <tank x="2.47475" y="1.42686" z="-0.79415" jet="1" capacity="1687.0"/>
+  <tank x="3.63306" y="-1.43009" z="-0.79055" jet="1" capacity="1867.0"/>
+  <tank x="0.72445" y="0" z="1.13914" jet="1" capacity="1.0"/>
 
   <weight x="6.48141" y="0.506127" z="-0.175444" mass-prop="/sim/weight[0]/weight-lb"/> <!-- left seat  -->
   <weight x="6.48141" y="-0.506127" z="-0.175444" mass-prop="/sim/weight[1]/weight-lb"/> <!-- right seat -->
 
-  <ballast x="3" y=" 0.0" z="-0.5" mass="450"/>
-  <ballast x="2" y=" 1.1" z=" 1.1" mass="100"/>
-  <ballast x="2" y="-1.1" z=" 1.1" mass="50"/>
+  <!--ballast x="3" y=" 0.0" z="-0.5" mass="1500"/>
+  <ballast x="2" y=" 1.1" z=" 1.1" mass="4000"/>
+  <ballast x="2" y="-1.1" z=" 1.1" mass="500"/-->
 
 </airplane>
 
