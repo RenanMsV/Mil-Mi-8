@@ -128,6 +128,7 @@ var Startup = func {
   setprop("/controls/electric/key",4);
   setprop("/controls/engines/engine[0]/clutch",1);
   props.globals.getNode("/controls/engines/engine[0]/starter").setBoolValue(1);
+  props.globals.getNode("/sim/model/start-idling").setBoolValue(1);
   setprop("engines/engine[0]/running", 1);
   gui.popupTip("Engines starting...", 4);
 }
@@ -144,6 +145,7 @@ var Shutdown = func {
   setprop("/controls/electric/key",0);
   setprop("/controls/engines/engine[0]/clutch",0);
   props.globals.getNode("/controls/engines/engine[0]/starter").setBoolValue(0);
+  props.globals.getNode("/sim/model/start-idling").setBoolValue(0);
   gui.popupTip("Engines shutdown, you can brake the rotor by holding 'r'", 4);
 }
 
@@ -159,9 +161,7 @@ var flight_meter = func{
 }
 
 var kill_engine=func{
-  setprop("/controls/engines/engine/magnetos",0);
-  setprop("/engines/engine/clutch-engaged",0);
-  setprop("/engines/engine/running",0);
+  Shutdown();
   start_timer=0;
 }
 
@@ -170,7 +170,7 @@ var update_fuel = func{
   amnt = amnt * 0.5;
   var lvl = Fuel1_Level.getValue();
   lvl = lvl-amnt;
-  if(lvl < 0.0)lvl = 0.0;
+  if(lvl < 0.0) lvl = 0.0;
   Fuel1_Level.setDoubleValue(lvl);
   Fuel1_LBS.setDoubleValue(lvl * Fuel_Density);
   TotalFuelG.setDoubleValue(lvl);
@@ -193,7 +193,7 @@ var update_systems = func {
     if(getprop("/rotors/main/rpm") > 525) RPM_arm.setBoolValue(1);
   }
   
-
+  # Robinson crank start system
   if(getprop("/systems/electrical/outputs/starter") > 11){
     if(getprop("/controls/electric/key") > 2){
       setprop("/engines/engine/cranking",1);
@@ -235,8 +235,8 @@ var update_systems = func {
         interpolate("/rotors/main/rpm", 2700 * throttle, 7); # .9
         interpolate("/rotors/tail/rpm", 2700 * throttle, 7); # .9
       } else {
-        interpolate("/rotors/main/rpm", 0, 0.2);
-        interpolate("/rotors/tail/rpm", 0, 0.2);
+        interpolate("/rotors/main/rpm", 0, 0.2); # .2
+        interpolate("/rotors/tail/rpm", 0, 0.2); # .2
       }
         interpolate("/engines/engine/rpm", 2700 * throttle, 7); # 0.8
     } else {
