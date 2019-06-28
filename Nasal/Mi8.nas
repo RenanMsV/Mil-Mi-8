@@ -11,7 +11,7 @@
 var RPM_arm=props.globals.getNode("/instrumentation/alerts/rpm",1);
 var last_time = 0;
 var start_timer=0;
-var GPS = 0.002222;  ### avg cruise = 8 gph
+var GPS = 0.0152083333;  ### avg cruise = 60 gph
 var Fuel_Density=6.0;
 var Fuel1_Level= props.globals.getNode("/consumables/fuel/tank/level-gal_us",1);
 var Fuel1_LBS= props.globals.getNode("/consumables/fuel/tank/level-lbs",1);
