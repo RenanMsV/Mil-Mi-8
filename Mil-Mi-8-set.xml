@@ -181,6 +181,7 @@
       <file>Aircraft/Mil-Mi-8/Nasal/electrical.nas</file>
       <file>Aircraft/Mil-Mi-8/Nasal/fcs-management.nas</file>
       <file>Aircraft/Mil-Mi-8/Nasal/generic-helicopter-fcs.nas</file>
+      <file>Aircraft/Mil-Mi-8/Nasal/lightmanager.nas</file>
     </Mi8>
   </nasal>
 

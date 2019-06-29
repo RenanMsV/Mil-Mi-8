@@ -514,4 +514,8 @@
       <z-m>0.0</z-m>
     </offsets>
   </model>
+  <!-- -->
+  <model>
+    <path>Aircraft/Mil-Mi-8/Models/Exterior/Light/Mil-Mi-8-lights.xml</path>
+  </model>
 </PropertyList>

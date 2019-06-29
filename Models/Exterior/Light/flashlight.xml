@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PropertyList>
+  <path>flashlight.ac</path>
+  <animation>
+    <type>noshadow</type>
+    <object-name>flash</object-name>
+  </animation>
+  <animation>
+    <type>alpha-test</type>
+    <alpha-factor>0.01</alpha-factor>
+  </animation>
+  <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+    <object-name>flash</object-name>
+  </effect>
+  <animation>
+    <type>flash</type>
+    <object-name>flash</object-name>
+    <center>
+      <x-m>0.0</x-m>
+      <y-m>0.0</y-m>
+      <z-m>0.0</z-m>
+    </center>
+    <axis>
+      <x>-1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+    <power>64</power>
+    <factor>6</factor>
+    <offset>0</offset>
+    <two-sides type="bool">false</two-sides>
+    <min>0.3</min>
+    <max>1</max>
+  </animation>
+</PropertyList>

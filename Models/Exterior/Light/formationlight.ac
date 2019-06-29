@@ -1,0 +1,204 @@
+AC3Db
+MATERIAL "FormationGreen" rgb 0.3039 0.8 0.563  amb 0 0 0  emis 0.3039 0.8 0.563  spec 0.5 0.5 0.5  shi 12  trans 0
+OBJECT world
+kids 10
+OBJECT poly
+name "RightFront1"
+loc -3.20902 -0.283231 -0.308036
+data 9
+Plane.005
+crease 35.000000
+numvert 4
+0.06425 -0.01991 -0.03018
+-0.06425 -0.01991 0.03018
+0.06425 0.01991 -0.03018
+-0.06425 0.01991 0.03018
+numsurf 1
+SURF 0x0
+mat 0
+refs 4
+0 0 0
+1 0 0
+3 0 0
+2 0 0
+kids 0
+OBJECT poly
+name "RightFront2"
+loc -3.04537 -0.283231 -0.373698
+data 9
+Plane.006
+crease 35.000000
+numvert 4
+0.0673299 -0.01991 -0.02252
+-0.0673299 -0.01991 0.02252
+0.0673299 0.01991 -0.02252
+-0.0673299 0.01991 0.02252
+numsurf 1
+SURF 0x0
+mat 0
+refs 4
+0 0 0
+1 0 0
+3 0 0
+2 0 0
+kids 0
+OBJECT poly
+name "RightCenter"
+loc 0.203074 -0.0808324 -5.85155
+data 9
+Plane.007
+crease 35.000000
+numvert 4
+0.04608 0.00799 0
+-0.04608 0.00799 0
+0.04608 -0.00799 0
+-0.04608 -0.00799 0
+numsurf 1
+SURF 0x0
+mat 0
+refs 4
+2 0 0
+3 0 0
+1 0 0
+0 0 0
+kids 0
+OBJECT poly
+name "RightBack2"
+loc 6.22781 1.18995 -0.08904
+data 9
+Plane.008
+crease 35.000000
+numvert 4
+0.0447602 0.0731601 -0.00149
+-0.00474977 -0.0856 0.00296
+0.00474977 0.0856 -0.00296
+-0.0447602 -0.0731601 0.00149
+numsurf 1
+SURF 0x0
+mat 0
+refs 4
+0 0 0
+1 0 0
+3 0 0
+2 0 0
+kids 0
+OBJECT poly
+name "RightBack1"
+loc 6.27611 1.40394 -0.08904
+data 9
+Plane.009
+crease 35.000000
+numvert 4
+0.0419602 0.07481 -0.00149
+-0.00151014 -0.0857199 0.00296
+0.00151014 0.0857199 -0.00296
+-0.0419602 -0.07481 0.00149
+numsurf 1
+SURF 0x0
+mat 0
+refs 4
+0 0 0
+1 0 0
+3 0 0
+2 0 0
+kids 0
+OBJECT poly
+name "LeftFront2"
+loc -3.05317 -0.283231 0.370715
+data 5
+Plane
+crease 35.000000
+numvert 4
+-0.0673299 -0.01991 -0.02252
+0.0673299 -0.01991 0.02252
+-0.0673299 0.01991 -0.02252
+0.0673299 0.01991 0.02252
+numsurf 1
+SURF 0x0
+mat 0
+refs 4
+0 0 0
+1 0 0
+3 0 0
+2 0 0
+kids 0
+OBJECT poly
+name "LeftBack2"
+loc 6.21064 1.19488 0.089039
+data 9
+Plane.002
+crease 35.000000
+numvert 4
+-0.000400066 -0.08577 0.00149
+0.0409698 0.07531 -0.00296
+-0.0409698 -0.07531 0.00296
+0.000400066 0.08577 -0.00149
+numsurf 1
+SURF 0x0
+mat 0
+refs 4
+0 0 0
+1 0 0
+3 0 0
+2 0 0
+kids 0
+OBJECT poly
+name "LeftCenter"
+loc 0.20307 -0.080832 5.85155
+data 9
+Plane.001
+crease 35.000000
+numvert 4
+-0.04608 0.00799 0
+0.04608 0.00799 0
+-0.04608 -0.00799 0
+0.04608 -0.00799 0
+numsurf 1
+SURF 0x0
+mat 0
+refs 4
+2 0 0
+3 0 0
+1 0 0
+0 0 0
+kids 0
+OBJECT poly
+name "LeftBack1"
+loc 6.2585 1.39936 0.089039
+data 9
+Plane.003
+crease 35.000000
+numvert 4
+-0.000400066 -0.08577 0.00149
+0.0409698 0.07531 -0.00296
+-0.0409698 -0.07531 0.00296
+0.000400066 0.08577 -0.00149
+numsurf 1
+SURF 0x0
+mat 0
+refs 4
+0 0 0
+1 0 0
+3 0 0
+2 0 0
+kids 0
+OBJECT poly
+name "LeftFront1"
+loc -3.20902 -0.283231 0.309578
+data 9
+Plane.004
+crease 35.000000
+numvert 4
+-0.06425 -0.01991 -0.03018
+0.06425 -0.01991 0.03018
+-0.06425 0.01991 -0.03018
+0.06425 0.01991 0.03018
+numsurf 1
+SURF 0x0
+mat 0
+refs 4
+0 0 0
+1 0 0
+3 0 0
+2 0 0
+kids 0
