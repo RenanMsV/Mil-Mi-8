@@ -126,8 +126,8 @@
    <cockpit x="3.405" y="0.252" z="-0.140"/>
 
    <!-- Fuse -->
-   <fuselage ax="4.538" ay="0" az="-0.759" bx="0.594" by="0" bz="-0.534" width="1.361" taper="0.5" midpoint="0.35"/>
-   <fuselage ax="1.751" ay="0" az="-0.069" bx="-3.678" by="0" bz=" 0.352" width="0.380" taper="0.5" midpoint="0.00"/>
+   <fuselage ax="7.80548" ay="0" az="-0.08668" bx="-2.24" by="0" bz="0" width="2.5" taper="0.5" midpoint="0.5"/>
+   <fuselage ax="-2.25122" ay="0" az="1.02654" bx="-9.20389" by="0" bz="1.17654" width="1.080" taper="0.5" midpoint="0.00"/>
 
    <vstab x="-9.84237" y="0" z="1.80941"
      chord="0.510" 
@@ -146,9 +146,9 @@
      <stall aoa="16" width="4" peak="1.5"/>
    </vstab>
 
-   <hstab x="-3.597" y="-0.098" z="0.237"
-     chord="0.52" 
-     length="1.205" 
+   <hstab x="-7.497" y="-0.098" z="1.237"
+     chord="0.82" 
+     length="1.805" 
      taper="0.5"
      dihedral="180">
      <stall aoa="0" width="0" peak="1.5"/>
