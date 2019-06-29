@@ -20,6 +20,18 @@
         </binding>
       </item>
       <item>
+        <name>lights</name>
+        <label>Lights</label>
+        <enabled type="bool">true</enabled>
+        <binding>
+          <command>nasal</command>
+          <script>
+            var lights = gui.Dialog.new("sim/gui/dialogs/lights/dialog", "Aircraft/Mil-Mi-8/Dialogs/lights-dlg.xml");
+            lights.open();
+          </script>
+        </binding>
+      </item>
+      <item>
         <label>Blades visible</label>
         <enabled>false</enabled>
         <binding>
