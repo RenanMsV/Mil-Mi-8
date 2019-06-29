@@ -505,4 +505,13 @@
       <z>0</z>
     </axis>
   </animation>
+  <!-- Rotor dirt from the Mi-6PS-->
+  <model>
+    <path>Aircraft/Mil-Mi-8/Models/Exterior/RotorDirt/rotor_dirt.xml</path>
+    <offsets>
+      <x-m>0.0</x-m>
+      <y-m>0.0</y-m>
+      <z-m>0.0</z-m>
+    </offsets>
+  </model>
 </PropertyList>
