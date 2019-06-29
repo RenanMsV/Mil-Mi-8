@@ -7,7 +7,7 @@
      2019 Re-used as Mi8 FDM
    -->
 
-   <airplane mass="14991">
+   <airplane mass="19991">
 
     <approach speed="47" aoa="16">
       <control-setting axis="/controls/engines/engine[0]/throttle" value="0.3"/>
@@ -30,11 +30,11 @@
      mincyclicail="-2.5"
      maxcyclicail="2.7"
      diameter="21.3"
-     numblades="2"
-     weightperblade="60"
+     numblades="5"
+     weightperblade="300"
      relbladecenter="0.5"
      dynamic="1"
-     rpm="694"
+     rpm="494"
      rellenflaphinge="0.2"
      delta3="0.0"
      delta=".25"
@@ -51,7 +51,7 @@
      ground-effect-constant="0.1"
      twist="-8.5"
      taper="1"
-     chord="0.18288"
+     chord="0.68288"
      number-of-segments="8"
      number-of-parts="8"
      rel-len-where-incidence-is-measured="0.7"
@@ -64,7 +64,7 @@
      lift-factor-stall="0.18"
      stall-change-over="5.5"
      drag-factor-stall="2.0"
-     cyclic-factor="1.0"
+     cyclic-factor=".2"
      rotor-correction-factor="0.9">
      <control-input axis="/controls/flight/aileron-trim" control="CYCLICAIL" split="true"/>
      <control-input axis="/controls/flight/fcs/roll" control="CYCLICAIL" src0="-1.0" src1="1.0" dst0="-1.0" dst1="1.0"/>
@@ -81,7 +81,7 @@
      maxcollective="24"
      mincollective="-5"
      diameter="3.9"
-     numblades="2"
+     numblades="3"
      weightperblade="1"
      relbladecenter="0.55"
      dynamic="0.70"
@@ -113,9 +113,9 @@
 
    <rotorgear max-power-engine="3200"
      max-power-rotor-brake="50"
-     rotorgear-friction="0.0"
-     engine-prop-factor="0.0"
-     engine-accel-limit="3"
+     rotorgear-friction="0.02"
+     engine-prop-factor="0.02"
+     engine-accel-limit="5"
      yasimdragfactor="10"
      yasimliftfactor="140">
      <!--<control-input axis="/controls/engines/engine[0]/magnetos" control="ROTORGEARENGINEON"/>-->
