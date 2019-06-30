@@ -311,7 +311,7 @@
   <!-- BackDoorLeft animation -->
   <animation>
     <type>rotate</type>
-    <object-name>BackDoorLeft</object-name>
+    <object-name>CargoDoorLeft</object-name>
     <property>controls/switches/fuselage/cargo-door/position-norm</property>
     <factor>90</factor>
     <condition>
@@ -336,7 +336,7 @@
   <!-- BackDoorRight animation -->
   <animation>
     <type>rotate</type>
-    <object-name>BackDoorRight</object-name>
+    <object-name>CargoDoorRight</object-name>
     <property>controls/switches/fuselage/cargo-door/position-norm</property>
     <factor>-90</factor>
     <condition>
@@ -360,8 +360,8 @@
   </animation>
   <animation>
     <type>pick</type>
-    <object-name>BackDoorRight</object-name>
-    <object-name>BackDoorLeft</object-name>
+    <object-name>CargoDoorLeft</object-name>
+    <object-name>CargoDoorRight</object-name>
     <action>
       <button>0</button>
       <binding>
@@ -373,7 +373,7 @@
   <!-- Left Door animation -->
   <animation>
     <type>translate</type>
-    <object-name>Door</object-name>
+    <object-name>LeftDoor</object-name>
     <object-name>DoorGlass</object-name>
     <object-name>DoorGlassExt</object-name>
     <property>controls/switches/fuselage/left-door-y/position-norm</property>
@@ -399,7 +399,7 @@
   </animation>
   <animation>
     <type>translate</type>
-    <object-name>Door</object-name>
+    <object-name>LeftDoor</object-name>
     <object-name>DoorGlass</object-name>
     <object-name>DoorGlassExt</object-name>
     <property>controls/switches/fuselage/left-door-x/position-norm</property>
@@ -425,7 +425,7 @@
   </animation>
   <animation>
     <type>pick</type>
-    <object-name>Door</object-name>
+    <object-name>LeftDoor</object-name>
     <action>
       <button>0</button>
       <binding>
