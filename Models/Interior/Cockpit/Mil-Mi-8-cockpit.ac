@@ -3,10 +3,14 @@ MATERIAL "ac3dmat12" rgb 0.266667 0.266667 0.266667  amb 0.2 0.2 0.2  emis 0 0 0
 MATERIAL "Shape.155" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0 0 0  shi 82  trans 0
 MATERIAL "Shape.155" rgb 0.236842 0.642105 0.915789  amb 0.247368 0.647368 0.905263  emis 0 0 0  spec 0 0 0  shi 82  trans 0
 OBJECT world
+kids 1
+OBJECT group
+name "Mi8-Cockpit"
+loc -7.65342 -0.0446354 0.243413
 kids 48
 OBJECT poly
 name "seat"
-loc -6.36488 -0.75546 0
+loc 1.28854 -0.710825 -0.243413
 texture "Seat.png"
 crease 45.000000
 numvert 2214
@@ -18460,7 +18464,7 @@ refs 3
 kids 0
 OBJECT poly
 name "cylinder"
-loc -7.16996 0.286018 0.942231
+loc 0.483457 0.330653 0.698817
 texture "old_grunge.jpg"
 crease 45.000000
 numvert 105
@@ -19733,7 +19737,7 @@ refs 4
 kids 0
 OBJECT poly
 name "cylinder"
-loc -7.14348 0.246169 0.965745
+loc 0.509937 0.290804 0.722331
 texture "old_grunge.jpg"
 crease 45.000000
 numvert 42
@@ -20163,7 +20167,7 @@ refs 4
 kids 0
 OBJECT poly
 name "cylinder"
-loc -7.07619 0.245385 0.966369
+loc 0.577227 0.29002 0.722955
 texture "old_grunge.jpg"
 crease 45.000000
 numvert 84
@@ -21155,7 +21159,7 @@ refs 4
 kids 0
 OBJECT poly
 name "poly"
-loc -13.1335 -0.197564 0.865298
+loc -5.48008 -0.152929 0.621884
 texture "old_grunge.jpg"
 crease 45.000000
 numvert 40
@@ -21389,7 +21393,7 @@ refs 20
 kids 0
 OBJECT poly
 name "poly"
-loc -13.1335 -0.197564 0.865298
+loc -5.48008 -0.152929 0.621884
 texture "old_grunge.jpg"
 crease 45.000000
 numvert 40
@@ -21623,7 +21627,7 @@ refs 20
 kids 0
 OBJECT poly
 name "poly"
-loc -13.1335 -0.197564 0.865298
+loc -5.48008 -0.152929 0.621884
 texture "old_grunge.jpg"
 crease 45.000000
 numvert 40
@@ -21857,7 +21861,7 @@ refs 20
 kids 0
 OBJECT poly
 name "poly"
-loc -13.1339 -0.198403 0.14969
+loc -5.48048 -0.153768 -0.0937235
 texture "old_grunge.jpg"
 crease 45.000000
 numvert 40
@@ -22091,7 +22095,7 @@ refs 20
 kids 0
 OBJECT poly
 name "poly"
-loc -13.1339 -0.198403 0.14969
+loc -5.48048 -0.153768 -0.0937235
 texture "old_grunge.jpg"
 crease 45.000000
 numvert 40
@@ -22325,7 +22329,7 @@ refs 20
 kids 0
 OBJECT group
 name "cockpit"
-loc 4.1809 1.0889 -0.0003373
+loc 11.8343 1.13354 -0.243751
 kids 1
 OBJECT poly
 name "ShapeIndexedFaceSet.029"
@@ -36753,7 +36757,7 @@ refs 3
 kids 0
 OBJECT poly
 name "cylinder"
-loc -7.31105 -0.614247 -0.637642
+loc 0.342367 -0.569612 -0.881056
 texture "mi8 texture int.jpg"
 crease 45.000000
 numvert 105
@@ -38026,7 +38030,7 @@ refs 3
 kids 0
 OBJECT poly
 name "cylinder"
-loc -7.3082 -0.611347 -0.471979
+loc 0.345217 -0.566712 -0.715392
 texture "mi8 texture int.jpg"
 crease 45.000000
 numvert 105
@@ -39299,7 +39303,7 @@ refs 4
 kids 0
 OBJECT poly
 name "cylinder"
-loc -7.31104 -0.609206 0.460766
+loc 0.342377 -0.564571 0.217352
 texture "mi8 texture int.jpg"
 crease 45.000000
 numvert 105
@@ -40572,7 +40576,7 @@ refs 3
 kids 0
 OBJECT poly
 name "box"
-loc -7.01576 -0.780617 0.420477
+loc 0.637657 -0.735982 0.177064
 crease 45.000000
 numvert 8
 -0.00257254 0.0191569 -0.0400581
@@ -40629,7 +40633,7 @@ refs 4
 kids 0
 OBJECT poly
 name "cylinder"
-loc -7.18562 -0.780987 0.409964
+loc 0.467797 -0.736352 0.166551
 texture "mi8 texture int.jpg"
 crease 45.000000
 numvert 147
@@ -42464,7 +42468,7 @@ refs 3
 kids 0
 OBJECT poly
 name "cylinder"
-loc -7.18562 -0.775497 0.569718
+loc 0.467797 -0.730862 0.326304
 texture "mi8 texture int.jpg"
 crease 45.000000
 numvert 147
@@ -44299,7 +44303,7 @@ refs 3
 kids 0
 OBJECT poly
 name "box"
-loc -7.01576 -0.778957 0.561619
+loc 0.637657 -0.734322 0.318205
 crease 45.000000
 numvert 8
 -0.00257254 -0.0191565 -0.0400581
@@ -44356,7 +44360,7 @@ refs 4
 kids 0
 OBJECT poly
 name "box"
-loc -7.01577 -0.779497 -0.435057
+loc 0.637647 -0.734862 -0.67847
 crease 45.000000
 numvert 8
 -0.00257254 0.0191569 -0.0400581
@@ -44413,7 +44417,7 @@ refs 4
 kids 0
 OBJECT poly
 name "cylinder"
-loc -7.18562 -0.776037 -0.426957
+loc 0.467797 -0.731402 -0.670371
 texture "mi8 texture int.jpg"
 crease 45.000000
 numvert 147
@@ -46248,7 +46252,7 @@ refs 3
 kids 0
 OBJECT poly
 name "box"
-loc -7.01564 -0.498548 -0.830161
+loc 0.637777 -0.453913 -1.07357
 texture "panel.png"
 crease 45.000000
 numvert 8
@@ -46306,7 +46310,7 @@ refs 4
 kids 0
 OBJECT poly
 name "cylinder"
-loc -7.09411 -0.412617 0.23561
+loc 0.559307 -0.367982 -0.0078035
 texture "old_grunge.jpg"
 crease 45.000000
 numvert 12
@@ -46421,7 +46425,7 @@ refs 3
 kids 0
 OBJECT poly
 name "poly"
-loc -6.37606 0.573653 -0.317728
+loc 1.27736 0.618288 -0.561141
 texture "mi8 texture int.jpg"
 crease 45.000000
 numvert 16
@@ -46523,7 +46527,7 @@ refs 8
 kids 0
 OBJECT poly
 name "poly"
-loc -7.06918 0.904933 1.506
+loc 0.584237 0.949568 1.26259
 texture "mi8 texture int.jpg"
 crease 45.000000
 numvert 32
@@ -46713,7 +46717,7 @@ refs 16
 kids 0
 OBJECT poly
 name "ShapeIndexedFaceSet.030"
-loc -4.22108 3.82604 -0.000336289
+loc 3.43234 3.87068 -0.24375
 data 23
 ShapeIndexedFaceSet.030
 texture "mi8 texture int.jpg"
@@ -47130,7 +47134,7 @@ refs 3
 kids 0
 OBJECT poly
 name "box"
-loc -6.10468 -0.747577 0.00124526
+loc 1.54874 -0.702942 -0.242168
 texture "panel.png"
 crease 45.000000
 numvert 20
@@ -47305,7 +47309,7 @@ refs 4
 kids 0
 OBJECT poly
 name "poly"
-loc -9.1667 -1.1209 0.498882
+loc -1.51328 -1.07626 0.255468
 texture "mi8 texture int.jpg"
 crease 45.000000
 numvert 48
@@ -47589,7 +47593,7 @@ refs 12
 kids 0
 OBJECT poly
 name "poly"
-loc -7.06918 0.904933 1.506
+loc 0.584237 0.949568 1.26259
 texture "mi8 texture int.jpg"
 crease 45.000000
 numvert 32
@@ -47779,7 +47783,7 @@ refs 16
 kids 0
 OBJECT poly
 name "poly"
-loc -9.85224 0.678503 0.331274
+loc -2.19882 0.723138 0.0878605
 texture "mi8 texture int.jpg"
 crease 45.000000
 numvert 26
@@ -47936,7 +47940,7 @@ refs 13
 kids 0
 OBJECT poly
 name "poly"
-loc -9.85538 0.675813 -0.0326974
+loc -2.20196 0.720448 -0.276111
 texture "mi8 texture int.jpg"
 crease 45.000000
 numvert 26
@@ -48093,7 +48097,7 @@ refs 13
 kids 0
 OBJECT poly
 name "poly"
-loc -9.8559 0.675363 -0.392442
+loc -2.20248 0.719998 -0.635855
 texture "mi8 texture int.jpg"
 crease 45.000000
 numvert 26
@@ -48250,7 +48254,7 @@ refs 13
 kids 0
 OBJECT poly
 name "poly"
-loc -8.0341 -0.44167 1.04026
+loc -0.380682 -0.397035 0.796846
 texture "mi8 texture int.jpg"
 crease 45.000000
 numvert 28
@@ -48418,7 +48422,7 @@ refs 14
 kids 0
 OBJECT poly
 name "poly"
-loc -7.00678 0.887493 1.5118
+loc 0.646637 0.932128 1.26839
 texture "panel.png"
 crease 84.000000
 numvert 240
@@ -50190,7 +50194,7 @@ refs 30
 kids 0
 OBJECT poly
 name "poly"
-loc -6.97067 0.536833 -0.627639
+loc 0.682747 0.581468 -0.871053
 texture "mi8 texture int.jpg"
 crease 45.000000
 numvert 12
@@ -50276,7 +50280,7 @@ refs 3
 kids 0
 OBJECT poly
 name "poly"
-loc -6.37982 0.604773 0.271994
+loc 1.2736 0.649408 0.0285805
 texture "mi8 texture int.jpg"
 crease 45.000000
 numvert 16
@@ -50378,7 +50382,7 @@ refs 8
 kids 0
 OBJECT poly
 name "poly"
-loc -6.14068 0.597823 -0.0112303
+loc 1.51274 0.642458 -0.254644
 texture "old_grunge.jpg"
 crease 45.000000
 numvert 12
@@ -50458,7 +50462,7 @@ refs 6
 kids 0
 OBJECT poly
 name "cylinder"
-loc -7.09416 -0.412837 0.0127293
+loc 0.559257 -0.368202 -0.230684
 texture "old_grunge.jpg"
 crease 45.000000
 numvert 42
@@ -50888,7 +50892,7 @@ refs 4
 kids 0
 OBJECT poly
 name "cylinder"
-loc -7.09564 -0.412617 -0.231223
+loc 0.557777 -0.367982 -0.474636
 texture "old_grunge.jpg"
 crease 45.000000
 numvert 12
@@ -51003,7 +51007,7 @@ refs 4
 kids 0
 OBJECT poly
 name "box"
-loc -7.01538 -0.499111 0.867364
+loc 0.638037 -0.454476 0.62395
 texture "panel.png"
 crease 45.000000
 numvert 8
@@ -51061,7 +51065,7 @@ refs 4
 kids 0
 OBJECT poly
 name "cylinder"
-loc -7.18562 -0.781527 -0.586712
+loc 0.467797 -0.736892 -0.830126
 texture "mi8 texture int.jpg"
 crease 45.000000
 numvert 147
@@ -52896,7 +52900,7 @@ refs 4
 kids 0
 OBJECT poly
 name "box"
-loc -7.01577 -0.781157 -0.576199
+loc 0.637647 -0.736522 -0.819613
 crease 45.000000
 numvert 8
 -0.00257254 -0.0191565 -0.040058
@@ -52953,7 +52957,7 @@ refs 4
 kids 0
 OBJECT poly
 name "cylinder"
-loc -7.31104 -0.609163 0.620832
+loc 0.342377 -0.564528 0.377419
 texture "mi8 texture int.jpg"
 crease 45.000000
 numvert 105
@@ -54226,7 +54230,7 @@ refs 4
 kids 0
 OBJECT poly
 name "poly"
-loc -13.1339 -0.198403 0.14969
+loc -5.48048 -0.153768 -0.0937235
 texture "old_grunge.jpg"
 crease 45.000000
 numvert 40
@@ -54460,7 +54464,7 @@ refs 20
 kids 0
 OBJECT poly
 name "cylinder"
-loc -7.07661 0.244546 0.25076
+loc 0.576807 0.289181 0.0073465
 texture "old_grunge.jpg"
 crease 45.000000
 numvert 84
@@ -55452,7 +55456,7 @@ refs 4
 kids 0
 OBJECT poly
 name "cylinder"
-loc -7.1439 0.24533 0.250136
+loc 0.509517 0.289965 0.00672249
 texture "old_grunge.jpg"
 crease 45.000000
 numvert 42
@@ -55882,7 +55886,7 @@ refs 4
 kids 0
 OBJECT poly
 name "cylinder"
-loc -7.17038 0.285179 0.226623
+loc 0.483037 0.329814 -0.0167905
 texture "old_grunge.jpg"
 crease 45.000000
 numvert 105
@@ -57155,7 +57159,7 @@ refs 4
 kids 0
 OBJECT poly
 name "box"
-loc -7.1505 0.297177 -0.0130818
+loc 0.502917 0.341812 -0.256495
 texture "old_grunge.jpg"
 crease 45.000000
 numvert 8
@@ -57213,7 +57217,7 @@ refs 4
 kids 0
 OBJECT poly
 name "poly"
-loc -6.76996 -0.608615 -0.197757
+loc 0.883457 -0.56398 -0.441171
 texture "mi8 texture int.jpg"
 crease 45.000000
 numvert 16
@@ -57315,7 +57319,7 @@ refs 8
 kids 0
 OBJECT poly
 name "ShapeIndexedFaceSet.030"
-loc -4.21262 -0.171272 -0.0003362
+loc 3.4408 -0.126637 -0.24375
 data 23
 ShapeIndexedFaceSet.030
 texture "mi8 texture int.jpg"

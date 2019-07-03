@@ -1,3 +1,22 @@
 <PropertyList>
-	<path>Mil-Mi-8-cockpit.ac</path>
+  <path>Mil-Mi-8-cockpit.ac</path>
+  <!-- ALS ShadowMap Effect -->
+  <effect>
+    <inherits-from>Effects/model-interior</inherits-from>
+    <object-name>Mi8-Cockpit</object-name>
+    <parameters>
+      <texture n="4">
+        <type>cubemap</type>
+        <images>
+          <positive-x>Aircraft/Mil-Mi-8/Models/Effects/ShadowMap-ALS/Cockpit/0004.png</positive-x>
+          <negative-x>Aircraft/Mil-Mi-8/Models/Effects/ShadowMap-ALS/Cockpit/0002.png</negative-x>
+          <positive-y>Aircraft/Mil-Mi-8/Models/Effects/ShadowMap-ALS/Cockpit/0001.png</positive-y>
+          <negative-y>Aircraft/Mil-Mi-8/Models/Effects/ShadowMap-ALS/Cockpit/0003.png</negative-y>
+          <positive-z>Aircraft/Mil-Mi-8/Models/Effects/ShadowMap-ALS/Cockpit/0006.png</positive-z>
+          <negative-z>Aircraft/Mil-Mi-8/Models/Effects/ShadowMap-ALS/Cockpit/0005.png</negative-z>
+        </images>
+      </texture>
+      <opacity-cube-center n="0">-6.5549 0.0 -0.14032</opacity-cube-center>
+    </parameters>
+  </effect>
 </PropertyList>
