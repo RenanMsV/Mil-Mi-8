@@ -17,6 +17,8 @@
         </images>
       </texture>
       <opacity-cube-center n="0">-6.5549 0.0 -0.14032</opacity-cube-center>
+      <irradiance-map-type type="int">2</irradiance-map-type>
+      <irradiance-map-strength type="float">.5</irradiance-map-strength>
     </parameters>
   </effect>
 </PropertyList>
