@@ -382,6 +382,55 @@
         <z>-1.5</z>
       </position>
     </alert>
+    <altitude-alert>
+      <name>altitude warning</name>
+      <mode>looped</mode>
+      <path>Aircraft/Mil-Mi-8/Sounds/440hz.wav</path>
+      <reference-dist>1.0</reference-dist>
+      <max-dist>8.0</max-dist>
+      <condition>
+        <and>
+          <greater-than>
+            <property>position/gear-agl-m</property>
+            <value>1.0</value>
+          </greater-than>
+          <less-than>
+            <property>position/gear-agl-m</property>
+            <value>10.0</value>
+          </less-than>
+          <greater-than>
+            <property>velocities/speed-down-fps</property>
+            <value>0</value>
+          </greater-than>
+          <or>
+            <greater-than>
+              <property>velocities/uBody-fps</property>
+              <value>30.0</value>
+            </greater-than>
+            <less-than>
+              <property>position/uBody-fps</property>
+              <value>-30.0</value>
+            </less-than>
+            <greater-than>
+              <property>velocities/vBody-fps</property>
+              <value>30.0</value>
+            </greater-than>
+            <less-than>
+              <property>position/vBody-fps</property>
+              <value>-30.0</value>
+            </less-than>
+          </or>
+        </and>
+      </condition>
+      <volume>
+        <factor>.2</factor>
+      </volume>
+      <position>
+        <x>-7</x>
+        <y>-.5</y>
+        <z>0.1</z>
+      </position>
+    </altitude-alert>
     <click>
       <name>switches on</name>
       <mode>once</mode>
