@@ -123,7 +123,7 @@
     <view n="103">
       <name>Tail View</name>
       <type>lookfrom</type>
-      <internal archive="y">true</internal>
+      <internal archive="y">false</internal>
       <config>
         <from-model type="bool">true</from-model>
         <from-model-idx type="int">0</from-model-idx>
@@ -137,7 +137,7 @@
     <view n="104">
       <name>Gunner Left View</name>
       <type>lookfrom</type>
-      <internal archive="y">true</internal>
+      <internal archive="y">false</internal>
       <config>
         <from-model type="bool">true</from-model>
         <from-model-idx type="int">0</from-model-idx>
@@ -153,7 +153,7 @@
     <view n="105">
       <name>Gunner Right View</name>
       <type>lookfrom</type>
-      <internal archive="y">true</internal>
+      <internal archive="y">false</internal>
       <config>
         <from-model type="bool">true</from-model>
         <from-model-idx type="int">0</from-model-idx>
