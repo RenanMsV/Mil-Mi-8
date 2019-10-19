@@ -1,0 +1,26 @@
+<PropertyList>
+    <path>Sokol304.ac</path>
+    <animation>
+        <type>pick</type>
+        <object-name>Button1</object-name>
+        <object-name>Button2</object-name>
+        <action>
+            <button>0</button>
+            <binding>
+                <command>property-cycle</command>
+                <property>/controls/switches/cockpit/musicradiochannel</property>
+                <value type="string">Off</value>
+                <value type="string">1</value>
+                <value type="string">2</value>
+                <value type="string">UVB-76</value>
+                <wrap>true</wrap>
+            </binding>
+            <binding>
+                <command>nasal</command>
+                <script>
+                    gui.popupTip("Channel set to: " ~ getprop("controls/switches/cockpit/musicradiochannel") , 10);
+                </script>
+            </binding>
+        </action>
+    </animation>
+</PropertyList>

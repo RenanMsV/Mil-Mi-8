@@ -21,4 +21,7 @@
       <irradiance-map-strength type="float">.5</irradiance-map-strength>
     </parameters>
   </effect>
+  <model>
+    <path>Aircraft/Mil-Mi-8/Models/Interior/Cockpit/music-radio/Sokol304.xml</path>
+  </model>
 </PropertyList>

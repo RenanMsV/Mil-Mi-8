@@ -490,5 +490,65 @@
       <reference-dist>15</reference-dist>
       <max-dist>50</max-dist>
     </door>
+    <musicradio>
+      <name>musicradio</name>
+      <mode>once</mode>
+      <path>Aircraft/Mil-Mi-8/Sounds/music-radio/cheekibreeki.wav</path>
+      <condition>
+        <equals>
+          <property>/controls/switches/cockpit/musicradiochannel</property>
+          <value>1</value>
+        </equals>
+      </condition>
+      <position>
+        <x>6.11431</x>
+        <y>-0.54231</y>
+        <z>-0.52031</z>
+      </position>
+      <max-dist>40</max-dist>
+      <volume>
+        <factor>.7</factor>
+      </volume>
+    </musicradio>
+    <musicradio2>
+      <name>musicradio2</name>
+      <mode>once</mode>
+      <path>Aircraft/Mil-Mi-8/Sounds/music-radio/blyatifulanthem.wav</path>
+      <condition>
+        <equals>
+          <property>/controls/switches/cockpit/musicradiochannel</property>
+          <value>2</value>
+        </equals>
+      </condition>
+      <position>
+        <x>6.11431</x>
+        <y>-0.54231</y>
+        <z>-0.52031</z>
+      </position>
+      <max-dist>40</max-dist>
+      <volume>
+        <factor>.7</factor>
+      </volume>
+    </musicradio2>
+    <musicradio3>
+      <name>musicradio3</name>
+      <mode>looped</mode>
+      <path>Aircraft/Mil-Mi-8/Sounds/music-radio/uvb-76.wav</path>
+      <condition>
+        <equals>
+          <property>/controls/switches/cockpit/musicradiochannel</property>
+          <value type="string">UVB-76</value>
+        </equals>
+      </condition>
+      <position>
+        <x>6.11431</x>
+        <y>-0.54231</y>
+        <z>-0.52031</z>
+      </position>
+      <max-dist>40</max-dist>
+      <volume>
+        <factor>.7</factor>
+      </volume>
+    </musicradio3>
   </fx>
 </PropertyList>
