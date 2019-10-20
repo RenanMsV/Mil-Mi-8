@@ -430,9 +430,14 @@
       <button>0</button>
       <binding>
         <condition>
-          <not>
-            <property>controls/switches/fuselage/left-door-y/position-norm</property>
-          </not>
+          <and>
+            <not>
+              <property>controls/switches/fuselage/left-door-y/position-norm</property>
+            </not>
+            <not>
+              <property>controls/switches/fuselage/left-door-x/position-norm</property>
+            </not>
+          </and>
         </condition>
         <command>property-interpolate</command>
         <property>controls/switches/fuselage/left-door-y/position-norm</property>
@@ -441,7 +446,12 @@
       </binding>
       <binding>
         <condition>
-          <property>controls/switches/fuselage/left-door-y/position-norm</property>
+          <and>
+            <property>controls/switches/fuselage/left-door-y/position-norm</property>
+            <not>
+              <property>controls/switches/fuselage/left-door-x/position-norm</property>
+            </not>
+          </and>
         </condition>
         <command>property-interpolate</command>
         <property>controls/switches/fuselage/left-door-y/position-norm</property>
@@ -468,7 +478,12 @@
       <button>4</button>
       <binding>
         <condition>
-          <property>controls/switches/fuselage/left-door-x/position-norm</property>
+          <and>
+            <property>controls/switches/fuselage/left-door-x/position-norm</property>
+            <not>
+              <property>controls/switches/cockpit/passenger-left-stair</property>
+            </not>
+          </and>
         </condition>
         <command>property-interpolate</command>
         <property>controls/switches/fuselage/left-door-x/position-norm</property>
@@ -540,16 +555,5 @@
   <model>
     <path>Aircraft/Mil-Mi-8/Models/Exterior/Light/Mil-Mi-8-lights.xml</path>
   </model>
-  <!-- Left Door Stair -->
-  <animation>
-    <type>select</type>
-    <object-name>Stair</object-name>
-    <condition>
-      <greater-than>
-        <property>controls/switches/fuselage/left-door-y/position-norm</property>
-        <value type="double">0</value>
-      </greater-than>
-    </condition>
-  </animation>
   
 </PropertyList>

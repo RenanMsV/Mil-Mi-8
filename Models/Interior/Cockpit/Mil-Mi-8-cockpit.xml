@@ -21,6 +21,58 @@
       <irradiance-map-strength type="float">.5</irradiance-map-strength>
     </parameters>
   </effect>
+  <!-- Left Door Stair -->
+  <animation>
+    <type>rotate</type>
+    <object-name>Stair</object-name>
+    <property>controls/switches/cockpit/passenger-left-stair</property>
+    <condition>
+      <greater-than>
+        <property>controls/switches/fuselage/left-door-x/position-norm</property>
+        <value type="double">0</value>
+      </greater-than>
+    </condition>
+    <factor>180</factor>
+    <offset-deg>180</offset-deg>
+    <center>
+      <x-m>-5.17401</x-m>
+      <y-m>-0.967584</y-m>
+      <z-m>-1.0773</z-m>
+    </center>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+  <animation>
+    <type>pick</type>
+    <object-name>Stair</object-name>
+    <action>
+      <button>0</button>
+      <binding>
+        <condition>
+          <not>
+            <property>controls/switches/cockpit/passenger-left-stair</property>
+          </not>
+        </condition>
+        <command>property-interpolate</command>
+        <property>controls/switches/cockpit/passenger-left-stair</property>
+        <value type="double">1</value>
+        <rate>0.5</rate>
+      </binding>
+      <binding>
+        <condition>
+          <property>controls/switches/cockpit/passenger-left-stair</property>
+        </condition>
+        <command>property-interpolate</command>
+        <property>controls/switches/cockpit/passenger-left-stair</property>
+        <value type="double">0</value>
+        <rate>0.5</rate>
+      </binding>
+    </action>
+  </animation>
+  <!-- Slav radio -->
   <model>
     <path>Aircraft/Mil-Mi-8/Models/Interior/Cockpit/music-radio/Sokol304.xml</path>
   </model>
