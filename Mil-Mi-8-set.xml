@@ -241,6 +241,11 @@
       <aileron-trim>0</aileron-trim>
       <elevator-trim>0</elevator-trim>
     </flight>
+    <switches>
+      <cockpit>
+        <passenger-left-stair>0</passenger-left-stair>
+      </cockpit>
+    </switches>
   </controls>
 
   <engines>
