@@ -32,8 +32,8 @@
         <value type="double">0</value>
       </greater-than>
     </condition>
-    <factor>180</factor>
-    <offset-deg>180</offset-deg>
+    <factor>155</factor>
+    <offset-deg>205</offset-deg>
     <center>
       <x-m>-5.17401</x-m>
       <y-m>-0.967584</y-m>
