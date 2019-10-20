@@ -243,7 +243,8 @@
     </flight>
     <switches>
       <cockpit>
-        <passenger-left-stair>0</passenger-left-stair>
+        <passenger-left-stair-norm>0</passenger-left-stair-norm>
+        <back-door-stair-norm>0</back-door-stair-norm>
       </cockpit>
     </switches>
   </controls>

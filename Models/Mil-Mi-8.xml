@@ -312,6 +312,7 @@
   <animation>
     <type>rotate</type>
     <object-name>CargoDoorLeft</object-name>
+    <object-name>CargoDoorLeftInt</object-name>
     <property>controls/switches/fuselage/cargo-door/position-norm</property>
     <factor>90</factor>
     <condition>
@@ -337,6 +338,7 @@
   <animation>
     <type>rotate</type>
     <object-name>CargoDoorRight</object-name>
+    <object-name>CargoDoorRightInt</object-name>
     <property>controls/switches/fuselage/cargo-door/position-norm</property>
     <factor>-90</factor>
     <condition>
@@ -365,6 +367,11 @@
     <action>
       <button>0</button>
       <binding>
+        <condition>
+          <not>
+            <property>controls/switches/cockpit/back-door-stair-norm</property>
+          </not>
+        </condition>
         <command>nasal</command>
         <script>Mi8.cargo_door.toggle();</script>
       </binding>
@@ -481,7 +488,7 @@
           <and>
             <property>controls/switches/fuselage/left-door-x/position-norm</property>
             <not>
-              <property>controls/switches/cockpit/passenger-left-stair</property>
+              <property>controls/switches/cockpit/passenger-left-stair-norm</property>
             </not>
           </and>
         </condition>
@@ -555,5 +562,19 @@
   <model>
     <path>Aircraft/Mil-Mi-8/Models/Exterior/Light/Mil-Mi-8-lights.xml</path>
   </model>
-  
+  <!-- Toggle Back Doors animation-->
+  <animation>
+    <type>select</type>
+    <object-name>CargoDoorLeftInt</object-name>
+    <object-name>CargoDoorRightInt</object-name>
+    <object-name>CargoDoorLeft</object-name>
+    <object-name>CargoDoorRight</object-name>
+    <object-name>StairBack</object-name>
+    <object-name>BackCargoSeat</object-name>
+    <condition>
+      <not>
+        <property>controls/switches/cockpit/toggle-backdoors</property>
+      </not>
+    </condition>
+  </animation>
 </PropertyList>

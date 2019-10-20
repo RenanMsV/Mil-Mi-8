@@ -65,6 +65,13 @@
         </binding>
       </item>
       <item>
+        <label>Remove Cargo Doors</label>
+        <binding>
+          <command>property-toggle</command>
+          <property>controls/switches/cockpit/toggle-backdoors</property>
+        </binding>
+      </item>
+      <item>
         <label>Immatriculation</label>
         <enabled>false</enabled>
         <binding>
