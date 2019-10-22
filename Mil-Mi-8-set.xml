@@ -142,12 +142,12 @@
         <from-model type="bool">true</from-model>
         <from-model-idx type="int">0</from-model-idx>
         <ground-level-nearplane-m type="double">0.05</ground-level-nearplane-m>
-        <default-field-of-view-deg type="double">55</default-field-of-view-deg>
-        <pitch-offset-deg>0</pitch-offset-deg>
+        <default-field-of-view-deg type="double">65</default-field-of-view-deg>
+        <pitch-offset-deg>-4.2</pitch-offset-deg>
         <heading-offset-deg>90</heading-offset-deg>
-        <x-offset-m archive="y">-0.990</x-offset-m>
-        <y-offset-m archive="y">0.118</y-offset-m>
-        <z-offset-m archive="y">-5.20</z-offset-m>
+        <x-offset-m archive="y">-0.410</x-offset-m>
+        <y-offset-m archive="y">0</y-offset-m>
+        <z-offset-m archive="y">-5.187</z-offset-m>
       </config>
     </view>
     <view n="105">
@@ -158,12 +158,28 @@
         <from-model type="bool">true</from-model>
         <from-model-idx type="int">0</from-model-idx>
         <ground-level-nearplane-m type="double">0.05</ground-level-nearplane-m>
-        <default-field-of-view-deg type="double">55</default-field-of-view-deg>
+        <default-field-of-view-deg type="double">65</default-field-of-view-deg>
         <pitch-offset-deg>0</pitch-offset-deg>
-        <heading-offset-deg>90</heading-offset-deg>
+        <heading-offset-deg>-90</heading-offset-deg>
         <x-offset-m archive="y">0.990</x-offset-m>
         <y-offset-m archive="y">0.118</y-offset-m>
         <z-offset-m archive="y">-5.20</z-offset-m>
+      </config>
+    </view>
+    <view n="106">
+      <name>Gunner Back View</name>
+      <type>lookfrom</type>
+      <internal archive="y">false</internal>
+      <config>
+        <from-model type="bool">true</from-model>
+        <from-model-idx type="int">0</from-model-idx>
+        <ground-level-nearplane-m type="double">0.05</ground-level-nearplane-m>
+        <default-field-of-view-deg type="double">65</default-field-of-view-deg>
+        <pitch-offset-deg>-1.5</pitch-offset-deg>
+        <heading-offset-deg>-180</heading-offset-deg>
+        <x-offset-m archive="y">0.6725</x-offset-m>
+        <y-offset-m archive="y">-0.18</y-offset-m>
+        <z-offset-m archive="y">-1.34</z-offset-m>
       </config>
     </view>
 
@@ -171,17 +187,17 @@
       <title>Mil-Mi-8 - background and help</title>
       <line></line>
       <key>
-        <name>{</name>
+        <name>}</name>
         <desc>Start engines</desc>
       </key>
       <key>
-        <name>}</name>
+        <name>{</name>
         <desc>Shutdown engines</desc>
       </key>
-      <key>
+      <!--key>
         <name>d</name>
         <desc>Close pilot door</desc>
-      </key>
+      </key-->
       <key>
         <name>R</name>
         <desc>Toggle rotor brake</desc>
@@ -245,6 +261,7 @@
       <cockpit>
         <passenger-left-stair-norm>0</passenger-left-stair-norm>
         <back-door-stair-norm>0</back-door-stair-norm>
+        <fo-seat-norm>0</fo-seat-norm>
       </cockpit>
     </switches>
   </controls>
