@@ -72,6 +72,13 @@
         </binding>
       </item>
       <item>
+        <label>Toggle PK Machine Guns</label>
+        <binding>
+          <command>property-toggle</command>
+          <property>controls/switches/cockpit/toggle-pkm</property>
+        </binding>
+      </item>
+      <item>
         <label>Immatriculation</label>
         <enabled>false</enabled>
         <binding>

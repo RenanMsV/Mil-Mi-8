@@ -183,4 +183,11 @@
       </binding>
     </action>
   </animation>
+  <!-- PKM -->
+  <model>
+    <path>Aircraft/Mil-Mi-8/Models/Interior/Cockpit/PKM/PKM.xml</path>
+    <condition>
+      <property>controls/switches/cockpit/toggle-pkm</property>
+    </condition>
+  </model>
 </PropertyList>
