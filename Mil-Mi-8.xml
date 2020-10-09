@@ -155,7 +155,7 @@
    </hstab>
 
    <!-- Nose -->
-   <gear x="5.43752" y="0" z="-2.09166" 
+   <gear x="4.96" y="0" z="-2.09166" 
     compression="0.2" 
     upx="-0.2" upy="0" upz="1">
     <control-input axis="/controls/flight/rudder" control="STEER" square="true" src0="-1" dst0="-1.0" src1="1" dst1="1.0"/>
@@ -163,7 +163,7 @@
   </gear>
 
   <!-- Left -->
-  <gear x="1.20751" y="2.23668" z="-1.80386" 
+  <gear x="0.70" y="2.186" z="-1.80386"
     compression="0.2" 
     upx="0" upy="-0.2" upz="1">
     <control-input axis="/controls/gear/brake-left" control="BRAKE"/>
@@ -171,7 +171,7 @@
   </gear>
 
   <!-- Right -->
-  <gear x="1.20751" y="-2.25243" z="-1.80386" 
+  <gear x="0.70" y="-2.186" z="-1.80386"
     compression="0.2" 
     upx="0" upy="0.2" upz="1">
     <control-input axis="/controls/gear/brake-right" control="BRAKE"/>
@@ -179,7 +179,7 @@
   </gear>
 
   <!-- Tail -->
-  <gear x="-8.36946" y="0" z="-0.05856"
+  <gear x="-8.899" y="0" z="-0.05856"
     skid="1"
     compression="0.01">
   </gear>
