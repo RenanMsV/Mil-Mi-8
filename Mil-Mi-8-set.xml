@@ -6,14 +6,14 @@
 
     <description>Mil-Mi-8T Hip-C (YASIM) - ALPHA</description>
     <long-description>The Mil Mi-8 is a medium twin-turbine helicopter, originally designed by the Soviet Union, and now produced by Russia. In addition to its most common role as a transport helicopter, the Mi-8 is also used as an airborne command post, armed gunship, and reconnaissance platform. Along with the related, more powerful Mil Mi-17, the Mi-8 is among the world's most-produced helicopters, used by over 50 countries. As of 2015, it is the third most common operational military aircraft in the world.</long-description>
-    <author>Kaito, RenanMsV, manilov.ap (3D), BARANGER Emmanuel (Systems), AUBERGER Jean Michel (FDM), BACON Guillaume (Sounds and Simulation Config)</author>
+    <author>Kaito, RenanMsV, manilov.ap (3D), Anirudh Prabhu (FDM), BARANGER Emmanuel (Systems), AUBERGER Jean Michel (FDM), BACON Guillaume (Sounds and Simulation Config)</author>
     <aircraft-version>0.1</aircraft-version>
     <status>Alpha</status>
     <flight-model archive="y">yasim</flight-model>
     <aero archive="y">Mil-Mi-8</aero>
     
     <rating>
-      <FDM type="int">1</FDM>
+      <FDM type="int">3</FDM>
       <systems type="int">0</systems>
       <cockpit type="int">0</cockpit>
       <model type="int">2</model>
@@ -27,6 +27,7 @@
       <tag>fixed-gear</tag>
       <tag>coldwar</tag>
       <tag>2-engine</tag>
+      <tag>Russian</tag>
     </tags>
 
     <sound>
@@ -68,10 +69,11 @@
     <view n="0">
       <internal archive="y">true</internal>
       <config>
-        <pitch-offset-deg>2.5</pitch-offset-deg>
+        <default-field-of-view-deg type="double">85</default-field-of-view-deg>
+        <pitch-offset-deg>-3.0</pitch-offset-deg>
         <x-offset-m archive="y">-0.54</x-offset-m> <!-- right/left -->
         <y-offset-m archive="y">0</y-offset-m> <!-- up/down -->
-        <z-offset-m archive="y">-6.275</z-offset-m> <!-- aft/fore -->
+        <z-offset-m archive="y">-6.13</z-offset-m> <!-- aft/fore -->
       </config>
     </view>
     <view n="100">
@@ -82,7 +84,7 @@
         <from-model type="bool">true</from-model>
         <from-model-idx type="int">0</from-model-idx>
         <ground-level-nearplane-m type="double">0.05</ground-level-nearplane-m>
-        <default-field-of-view-deg type="double">55</default-field-of-view-deg>
+        <default-field-of-view-deg type="double">75</default-field-of-view-deg>
         <pitch-offset-deg>2.5</pitch-offset-deg>
         <x-offset-m archive="y">0.54</x-offset-m>
         <y-offset-m archive="y">0</y-offset-m>
@@ -97,7 +99,7 @@
         <from-model type="bool">true</from-model>
         <from-model-idx type="int">0</from-model-idx>
         <ground-level-nearplane-m type="double">0.05</ground-level-nearplane-m>
-        <default-field-of-view-deg type="double">55</default-field-of-view-deg>
+        <default-field-of-view-deg type="double">75</default-field-of-view-deg>
         <pitch-offset-deg>2.5</pitch-offset-deg>
         <x-offset-m archive="y">0</x-offset-m>
         <y-offset-m archive="y">0</y-offset-m>
@@ -112,7 +114,7 @@
         <from-model type="bool">true</from-model>
         <from-model-idx type="int">0</from-model-idx>
         <ground-level-nearplane-m type="double">0.05</ground-level-nearplane-m>
-        <default-field-of-view-deg type="double">55</default-field-of-view-deg>
+        <default-field-of-view-deg type="double">65</default-field-of-view-deg>
         <pitch-offset-deg>-7</pitch-offset-deg>
         <heading-offset-deg>270</heading-offset-deg>
         <x-offset-m archive="y">-0.8</x-offset-m>
@@ -202,6 +204,7 @@
         <name>R</name>
         <desc>Toggle rotor brake</desc>
       </key>
+      <!-- ####
       <key>
         <name>r</name>
         <desc>Apply rotor brake</desc>
@@ -218,6 +221,24 @@
         <name>Ctrl f</name>
         <desc>Auto hover</desc>
       </key>
+    #### -->
+      <line></line>
+	    <text>
+=============== Mil-Mil-8 ===============
+Empty Wt.  15653 lb
+Gross Wt.  24471 lb
+Max TO Wt. 28660 lb
+Max Internal Cargo 8820Lbs i.e. 4000Kg
+			
+Cruise speed: 130 kn (240 km/h)
+Service Ceiling 16000ft
+
+CG Limitations
+(As per data of Mi-17-1V i.e. export version of Mi-8-MT)
+Main rotor rotation axis is at 1.95m
+Forward CG Limit  = +30cm  (forward of Main rotor rotation axis i.e. 2.25m)
+Backward CG Limit = -9.5cm (backward of Main rotor rotation axis i.e. 1.855m)
+	    </text>
     </help>
 
     <weight n="0">
@@ -232,7 +253,12 @@
       <max-lb>200</max-lb>
       <min-lb>0</min-lb>
     </weight>
-
+    <weight n="2">
+      <name>Cargo</name>
+      <weight-lb>200</weight-lb>
+      <max-lb>8820</max-lb>
+      <min-lb>10</min-lb>
+    </weight>
   </sim>
 
   <controls>
@@ -274,6 +300,23 @@
     </engine>
   </engines>
 
+  <consumables>
+        <fuel>
+            <tank n="0">
+			     <name>Service Tank</name> 
+			     <selected type="bool">true</selected>
+		    </tank>
+            <tank n="1">
+			     <name>Left Saddle</name> 
+			     <selected type="bool">true</selected>
+		    </tank>
+			<tank n="2">
+			     <name>Right Saddle</name> 
+			     <selected type="bool">true</selected>
+		    </tank>
+        </fuel>
+  </consumables>
+  
   <rotors>
     <main>
       <rpm type="double">0</rpm>
