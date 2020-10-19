@@ -1,66 +1,91 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 
-<!-- R44 FDM
-
+<!-- 
      2011 BARANGER Emmanuel First for test
      2011 JM-26 First really R44 FDM
      2019 Re-used as Mi8 FDM
+	2020 improved Mi-8 FDM by Anirudh Prabhu (Raptor)
+	    
    -->
+   
+   <!-- #### Specs.
+           Speed 130 kn  , Empty Wt. 15653 Lb (7100Kg)  , Gross Wt. 24471 Lb(11100Kg) , Max TO Wt. 28660 Lb (13000Kg)
+		 Max Internal Cargo 8820Lbs (4000Kg)   Max external slung cargo 11,023Lbs (5000Kg)
+		 Max Fuel 3700 L (810 imp gl) = 6548 lbs , Range 267 nmi , ferry range 520 nmi
+		 Service Ceiling 16000ft
+		 
+		 Engine = Klimov TV3-117, power = 1640kW each , weight =(648Lbs, 294Kg each) , Specific fuel consumption = 0.308 kg/kW/hr (0.507 lb/shp/hr) each.
+		 APU = AI-9V , weight: 65 kg (143 lb)
+	#### -->	 
 
-   <airplane mass="1280">
+   <airplane mass="15653">
 
     <approach speed="47" aoa="16">
       <control-setting axis="/controls/engines/engine[0]/throttle" value="0.3"/>
     </approach>
 
-    <cruise speed="125" alt="0">
+    <cruise speed="120" alt="0">
       <control-setting axis="/controls/engines/engine[0]/throttle" value="1.0"/>
     </cruise>
 
+<!-- #### old values nx="0.05" ny="0" nz="1" 
+                     fx="0.99" fy="0" fz="-0.043"
+				rpm="495" my rpm="280"
+				mincollective="-0.3"  maxcollective="14" then 10
+				airfoil-lift-coefficient="5.67" incidence-stall-zero-speed="31"    incidence-stall-half-sonic-speed="19"   drag-factor-stall="6.0"   stall-change-over="3.5"
+				airfoil-drag-coefficient0="0.01"    airfoil-drag-coefficient1="0.05"
+	#### -->
+<!-- #### aviahelpgroup.ae/supply/main-rotor-blades-8at-2710-00/
+          Main rotor blades 8AT-2710-00 conforms to the MIL8565J standards
+		Weight of each blade, not more than: 140 kg  
+		Weight of balancing loads, not more than: 0,6 kg
+		Static moment relative to rotation axis, kgf/m: 681
+   #### -->
+		<!-- ####  RPM= 270 old, as per researech document = 193 #### -->
     <rotor name="main" 
-     x="2.218" y="0.0" z="1.605" 
-     nx="0.05" ny="0" nz="1"
-     fx="0.99" fy="0" fz="-0.043" 
-     ccw="1"
+     x="1.988" y="0.0" z="2.725" 
+     nx="0" ny="0" nz="1"
+     fx="1" fy="0" fz="0"  
+     ccw="0"
      phi0="45"
-     maxcollective="17"
-     mincollective="0.3"
-     mincyclicele="-9.5"
-     maxcyclicele="9.5"
-     mincyclicail="-2.5"
-     maxcyclicail="2.7"
-     diameter="10.1"
-     numblades="2"
-     weightperblade="60"
+     maxcollective="9.2"
+     mincollective="0.0"
+     mincyclicele="-8.0"
+     maxcyclicele="8.0"
+     mincyclicail="-5.5"
+     maxcyclicail="5.5"
+     diameter="21.29"
+     numblades="5"
+     weightperblade="308"
      relbladecenter="0.5"
      dynamic="1"
-     rpm="495"
-     rellenflaphinge="0.2"
+     rpm="240"
+     rellenflaphinge="0.15"
      delta3="0.0"
      delta=".25"
      pitch-a="10"
      pitch-b="15"
      flapmin="-13.0"
      flapmax="13.0"
-     flap0="-2.0"
+     flap0="-5.0"
      flap0factor="0"
      notorque="0"
      dragfactor="0.30"
      translift-ve="20"
-     translift-maxfactor="0.7"
+     translift-maxfactor="1.2"
      ground-effect-constant="0.1"
      twist="-8.5"
      taper="1"
-     chord="0.18288"
+     chord="0.678"
      number-of-segments="8"
      number-of-parts="8"
      rel-len-where-incidence-is-measured="0.7"
-     rel-len-blade-start="0.04"
-     airfoil-lift-coefficient="5.67"
-     airfoil-drag-coefficient0="0.01"
-     airfoil-drag-coefficient1="0.05"
-     incidence-stall-zero-speed="19"
-     incidence-stall-half-sonic-speed="10"
+     rel-len-blade-start="0.178"
+     airfoil-lift-coefficient="3.85"
+     airfoil-drag-coefficient0="0.0075"
+     airfoil-drag-coefficient1="0.2500"
+     incidence-stall-zero-speed="15"
+     incidence-stall-half-sonic-speed="14.5"
      lift-factor-stall="0.18"
      stall-change-over="5.5"
      drag-factor-stall="2.0"
@@ -73,19 +98,25 @@
      <control-input axis="/controls/engines/engine[0]/throttle" control="COLLECTIVE" src0="0.0" src1="1.0" dst0="1.0" dst1="-1.0"/>
    </rotor>
 
+<!-- #### Old Values rpm="3356" my rpm="850"   pitch-a="10"   pitch-b="15"  mincollective="-5" (this is max tail rotor blade angle for right yaw) #### -->
+    
+<!-- #### Weight of each blade = 13 kg (28.66 lbs) length = 1.74m  width = 0.273m  
+          Max blade thickness = 2 cm  Thickness of handle = 6 cm  Source = upstreamfactory.com
+		 pitch-a = -6 (full left pedal) pitch-b = +23 (full right pedal) #### -->
+    <!-- ####  RPM= 980 old, as per researech document = 1124 #### -->
    <rotor name="tail"
-     x="-3.609" y="0.362" z="0.395"
+     x="-10.742" y="0.63" z="2.743"
      nx="0.0" ny="-1" nz="0.0"
      fx="1" fy="0" fz="0"
      ccw="1"
      maxcollective="24"
-     mincollective="-5"
-     diameter="1.47"
-     numblades="2"
-     weightperblade="1"
+     mincollective="-11"
+     diameter="3.91"
+     numblades="3"
+     weightperblade="28.66"
      relbladecenter="0.55"
      dynamic="0.70"
-     rpm="3356"
+     rpm="980"
      rellenflaphinge="0.0"
      delta3="1"
      translift="0" delta="0.8"
@@ -101,7 +132,7 @@
      drag-factor-stall="8"
      notorque="0"
      taper="1"
-     chord="0.116"
+     chord="0.273"
      number-of-segments="5"
      number-of-parts="4"
      rel-len-blade-start="0.2"
@@ -111,19 +142,20 @@
      <control-input axis="/controls/flight/fcs/tail-rotor/throttle" control="COLLECTIVE" src0="-1.0" src1="1.0" dst0="-1.0" dst1="1.0"/>
    </rotor>
 
-   <rotorgear max-power-engine="380"
-     max-power-rotor-brake="50"
+   <!-- Engine:  Klimov TV3-117, power: 1,640kW each-->
+   <rotorgear max-power-engine="3280"
+     max-power-rotor-brake="300"
      rotorgear-friction="0.5"
      engine-prop-factor="0.005"
      engine-accel-limit="3"
-     yasimdragfactor="10"
-     yasimliftfactor="140">
+     yasimdragfactor="60"
+     yasimliftfactor="100">
      <!--<control-input axis="/controls/engines/engine[0]/magnetos" control="ROTORGEARENGINEON"/>-->
      <control-input axis="/engines/engine/clutch-engaged" control="ROTORGEARENGINEON"/>
      <control-input axis="/controls/rotor/brake" control="ROTORBRAKE" src0="0.0" src1="1.0" dst0="0.0" dst1="1.0"/>
    </rotorgear>
 
-   <cockpit x="3.405" y="0.252" z="-0.140"/>
+   <cockpit x="6.40" y="0.51" z="-0.10"/>
 
    <!-- Fuse -->
    <fuselage ax="4.538" ay="0" az="-0.759" bx=" 0.594" by="0" bz="-0.534" width="1.361" taper="0.5" midpoint="0.35"/>
@@ -154,44 +186,45 @@
      <stall aoa="0" width="0" peak="1.5"/>
    </hstab>
 
-   <!-- Nose -->
-   <gear x="5.43752" y="0" z="-2.09166" 
+   <!-- Nose  -->
+   <!-- #### damp="1.0  spring="1.2" #### -->
+   <gear x="4.96" y="0" z="-2.09166" 
     skid="0" 
-    compression="0.05"
-    spring="1.0" 
-    damp="0.2" 
-    sfric="0.5" 
-    dfric="0.4">
+    compression="0.1"
+    spring="1.1" 
+    damp="1.0" 
+    sfric="1.5" 
+    dfric="0.8">
     <control-input axis="/controls/flight/rudder" control="STEER" square="true" src0="-1" dst0="-1.0" src1="1" dst1="1.0"/>
     <control-output control="STEER" prop="controls/gear/steering"/>
   </gear>
 
   <!-- Left -->
-  <gear x="1.20751" y="2.23668" z="-1.80386" 
+  <gear x="0.70" y="2.186" z="-1.80386" 
     skid="0" 
-    compression="0.05"
-    spring="1.0" 
-    damp="0.2" 
-    sfric="0.5" 
-    dfric="0.4">
+    compression="0.2"
+    spring="1.2" 
+    damp="1.0" 
+    sfric="1.5" 
+    dfric="0.8">
     <control-input axis="/controls/gear/brake-left" control="BRAKE"/>
     <control-input axis="/controls/gear/brake-parking" control="BRAKE"/>
   </gear>
 
-  <!-- Right -->
-  <gear x="1.20751" y="-2.25243" z="-1.80386" 
+  <!-- Right -->   
+  <gear x="0.70" y="-2.186" z="-1.80386" 
     skid="0" 
-    compression="0.05"
-    spring="1.0" 
-    damp="0.2" 
-    sfric="0.5" 
-    dfric="0.4">
+    compression="0.2"
+    spring="1.2" 
+    damp="1.0" 
+    sfric="1.5" 
+    dfric="0.8">
     <control-input axis="/controls/gear/brake-right" control="BRAKE"/>
     <control-input axis="/controls/gear/brake-parking" control="BRAKE"/>
   </gear>
 
   <!-- Tail -->
-  <gear x="-8.36946" y="0" z="-0.05856"
+  <gear x="-8.899" y="0" z="-0.05856"
     skid="1"
     compression="0.01"
     spring="0.1"
@@ -199,16 +232,31 @@
     dfric="1">
   </gear>
 
-  <tank x="2.39829" y="0" z="-0.996445" jet="1" capacity="981.0"/>
+  <!-- Fuel Tanks -->
+  <!-- Auxiliary internal tank of 1530Lbs i.e. inside Cargo Cabin is not used -->
+    <tank x="0.50" y="0" z="1.15" jet="1" capacity="710.0"/> <!-- Service Tank   x="0.43" -->
+	<tank x="1.91" y="1.4" z="-0.87" jet="1" capacity="1993.0"/>  <!-- Left Saddle Tank -->
+	<tank x="1.91" y="-1.4" z="-0.87" jet="1" capacity="1834.0"/> <!-- Right Saddle Tank -->
 
-  <weight x="6.48141" y="0.506127" z="-0.175444" mass-prop="/sim/weight[0]/weight-lb"/> <!-- left seat  -->
+
+  <weight x="6.48141" y="0.506127" z="-0.175444" mass-prop="/sim/weight[0]/weight-lb"/>  <!-- left seat  -->
   <weight x="6.48141" y="-0.506127" z="-0.175444" mass-prop="/sim/weight[1]/weight-lb"/> <!-- right seat -->
-
-  <ballast x="3" y=" 0.0" z="-0.5" mass="450"/>
-  <ballast x="2" y=" 1.1" z=" 1.1" mass="100"/>
-  <ballast x="2" y="-1.1" z=" 1.1" mass="50"/>
-
+    
+  <weight x="2.4" y="0" z="-0.60" mass-prop="/sim/weight[2]/weight-lb"/> <!-- Internal Cargo load -->
+  <!-- #### <weight x="-1.47" y="0" z="-0.65" mass-prop="/sim/weight[2]/weight-lb"/> #### --> <!-- combined Weight of rear cargo doors --> 
+  
+  <!-- Weight of each engine ( Klimov TV3-117) 648Lbs,  294Kg -->
+  <ballast x="3.6"  y="0.4" z="1.31" mass="648"/> <!-- Left Engine -->
+  <ballast x="3.6" y="-0.4" z="1.31" mass="648"/> <!-- Right Engine -->
+  
+  <ballast x="0.4" y="0.0" z="1.74" mass="143"/>       <!-- APU: AI-9V -->
+  <ballast x="2.0" y="0.0" z="1.38" mass="1856"/>      <!-- Main Rotor Gearbox: VR-14  842Kg,  1,856Lbs -->
+  <ballast x="1.95" y="0.0" z="2.33" mass="269"/>      <!-- Swash/Wollbe plate: 8-1950-000   122Kg,  269Lbs -->
+  <ballast x="-9.45" y="0.0" z="1.2" mass="53.8"/>     <!-- Intermediate gearbox: 8?-1515-000   24.4Kg,  53.8Lbs -->
+  <ballast x="-10.74" y="0.04" z="2.74" mass="129.4"/> <!-- Tail Rotor gearbox: 246-1517-000   58.7Kg, 129.4Lbs -->
+    
+  
+  
+  <ballast x="3" y=" 0.0" z="-0.5" mass="450"/> <!-- #### ? #### --> 
+  
 </airplane>
-
-
-
