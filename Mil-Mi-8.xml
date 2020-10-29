@@ -24,7 +24,7 @@
       <control-setting axis="/controls/engines/engine[0]/throttle" value="0.3"/>
     </approach>
 
-    <cruise speed="120" alt="0">
+    <cruise speed="130" alt="0">
       <control-setting axis="/controls/engines/engine[0]/throttle" value="1.0"/>
     </cruise>
 
@@ -98,7 +98,7 @@
      <control-input axis="/controls/engines/engine[0]/throttle" control="COLLECTIVE" src0="0.0" src1="1.0" dst0="1.0" dst1="-1.0"/>
    </rotor>
 
-<!-- #### Old Values rpm="3356" my rpm="850"   pitch-a="10"   pitch-b="15"  mincollective="-5" (this is max tail rotor blade angle for right yaw) #### -->
+<!-- #### Old Values rpm="3356" my rpm="850"   pitch-a="10"   pitch-b="15"  #### -->
     
 <!-- #### Weight of each blade = 13 kg (28.66 lbs) length = 1.74m  width = 0.273m  
           Max blade thickness = 2 cm  Thickness of handle = 6 cm  Source = upstreamfactory.com
@@ -157,34 +157,46 @@
 
    <cockpit x="6.40" y="0.51" z="-0.10"/>
 
-   <!-- Fuse -->
-   <fuselage ax="4.538" ay="0" az="-0.759" bx=" 0.594" by="0" bz="-0.534" width="1.361" taper="0.5" midpoint="0.35"/>
-   <fuselage ax="1.751" ay="0" az="-0.069" bx="-3.678" by="0" bz=" 0.352" width="0.380" taper="0.5" midpoint="0.00"/>
-
-   <vstab x="-3.589" y="-0.182" z="0.320"
-     chord="0.510" 
-     length="1.080" 
-     taper="0.5" 
-     sweep="13">
+   <!-- Fuselage -->
+   
+   <fuselage ax="7.327" ay="0" az="-0.157" bx="6.755" by="0" bz="-0.157" width="1.52" taper="0.328" midpoint="1"/>   <!-- Nose cone area -->
+   <fuselage ax="6.755" ay="0" az="-0.157" bx="5.647" by="0" bz="-0.157" width="2.07" taper="0.734" midpoint="1"/>   <!-- Cockpit area -->
+   <fuselage ax="5.647" ay="0" az="-0.157" bx="-0.757" by="0" bz="0" width="2.31" taper="0.895" midpoint="1.0"/>     <!-- Cargo Compartment area -->
+   <fuselage ax="-0.312" ay="0" az="-0.075" bx="-2.979" by="0" bz="1.066" width="2.31" taper="0.432" midpoint="0"/>  <!-- Rear Cargo area -->
+   <fuselage ax="-2.772" ay="0" az="1.020" bx="-9.520" by="0" bz="1.171" width="1.0" taper="0.513" midpoint="0"/>    <!-- Tail shaft area-->
+   <fuselage ax="-9.385" ay="0" az="1.254" bx="-10.758" by="0" bz="2.683" width="0.36" taper="1" midpoint="0.5"/>    <!-- Tail shaft vertical area-->
+   
+   <fuselage ax="4.259" ay="0.281" az="1.284"  bx="-1.0" by="0.281"  bz="1.284" width="0.7" taper="1" midpoint="0.5"/>    <!-- Left Engine -->
+   <fuselage ax="5.038" ay="0.281" az="1.241"  bx="4.259" by="0.281" bz="1.284" width="0.7" taper="0.317" midpoint="1"/>  <!-- Left Engine Dust Filter -->
+   <fuselage ax="4.259" ay="-0.281" az="1.284" bx="-1.0" by="-0.281" bz="1.284" width="0.7" taper="1" midpoint="0.5"/>    <!-- Right Engine -->
+   <fuselage ax="5.038" ay="-0.281" az="1.241" bx="4.259" by="-0.281" bz="1.284" width="0.7" taper="0.317" midpoint="1"/> <!-- Right Engine Dust Filter -->
+   <fuselage ax="3.204" ay="0" az="1.801" bx="0" by="0.158" bz="1.801" width="0.60" taper="1" midpoint="0.5"/>			  <!-- Oil Cooler Area -->
+   
+   <fuselage ax="3.065" ay="1.26" az="-0.8" bx="0.899" by="1.26" bz="-0.8" width="0.52" taper="1" midpoint="0.5"/>	    <!-- Left Saddle Tank area -->
+   <fuselage ax="3.514" ay="1.26" az="-0.8" bx="3.065" by="1.26" bz="-0.8" width="0.52" taper="0.225" midpoint="1"/>    <!-- Left Saddle Tank front cone -->
+   <fuselage ax="0.899" ay="1.26" az="-0.8" bx="0.425" by="1.26" bz="-0.8" width="0.52" taper="0.225" midpoint="0"/>    <!-- Left Saddle Tank rear cone -->
+  
+   <fuselage ax="4.644" ay="-1.26" az="-0.8" bx="0.899" by="-1.26" bz="-0.8" width="0.52" taper="1" midpoint="0.5"/>    <!-- Right Saddle Tank area -->
+   <fuselage ax="5.198" ay="-1.26" az="-0.8" bx="4.644" by="-1.26" bz="-0.8" width="0.52" taper="0.476" midpoint="1"/>  <!-- Right Saddle Tank front cone -->
+   <fuselage ax="0.899" ay="-1.26" az="-0.8" bx="0.425" by="-1.26" bz="-0.8" width="0.52" taper="0.225" midpoint="0"/>  <!-- Right Saddle Tank rear cone -->
+  
+  
+  
+   <vstab x="-9.636" y="0" z="1.5"
+     chord="0.6" 
+     length="1.16" 
+     taper="0.54" 
+     sweep="40">
      <stall aoa="16" width="4" peak="1.5"/>
    </vstab>
-
-   <vstab x="-3.589" y="-0.182" z="0.320"
-     chord="0.510" 
-     length="0.700" 
-     taper="0.6"
-     dihedral="270" 
-     sweep="24">
-     <stall aoa="16" width="4" peak="1.5"/>
-   </vstab>
-
-   <hstab x="-3.597" y="-0.098" z="0.237"
-     chord="0.52" 
-     length="1.205" 
-     taper="0.5"
+   
+   <hstab x="-8.0" y="-0.38" z="1.214"
+     chord="0.816" 
+     length="1.48" 
+     taper="0.612"
      dihedral="180">
      <stall aoa="0" width="0" peak="1.5"/>
-   </hstab>
+  </hstab>
 
    <!-- Nose  -->
    <!-- #### damp="1.0  spring="1.2" #### -->
@@ -234,7 +246,7 @@
 
   <!-- Fuel Tanks -->
   <!-- Auxiliary internal tank of 1530Lbs i.e. inside Cargo Cabin is not used -->
-    <tank x="0.50" y="0" z="1.15" jet="1" capacity="710.0"/> <!-- Service Tank   x="0.43" -->
+    <tank x="0.50" y="0" z="1.15" jet="1" capacity="710.0"/>      <!-- Service Tank  -->
 	<tank x="1.91" y="1.4" z="-0.87" jet="1" capacity="1993.0"/>  <!-- Left Saddle Tank -->
 	<tank x="1.91" y="-1.4" z="-0.87" jet="1" capacity="1834.0"/> <!-- Right Saddle Tank -->
 
@@ -243,9 +255,9 @@
   <weight x="6.48141" y="-0.506127" z="-0.175444" mass-prop="/sim/weight[1]/weight-lb"/> <!-- right seat -->
     
   <weight x="2.4" y="0" z="-0.60" mass-prop="/sim/weight[2]/weight-lb"/> <!-- Internal Cargo load -->
-  <!-- #### <weight x="-1.47" y="0" z="-0.65" mass-prop="/sim/weight[2]/weight-lb"/> #### --> <!-- combined Weight of rear cargo doors --> 
+  <!-- #### <weight x="-1.47" y="0" z="-0.65" mass-prop="/sim/weight[2]/weight-lb"/> #### --> <!-- To be implemented combined Weight of rear cargo doors --> 
   
-  <!-- Weight of each engine ( Klimov TV3-117) 648Lbs,  294Kg -->
+  <!-- Weight of each engine (Klimov TV3-117) 648Lbs,  294Kg -->
   <ballast x="3.6"  y="0.4" z="1.31" mass="648"/> <!-- Left Engine -->
   <ballast x="3.6" y="-0.4" z="1.31" mass="648"/> <!-- Right Engine -->
   
@@ -254,9 +266,7 @@
   <ballast x="1.95" y="0.0" z="2.33" mass="269"/>      <!-- Swash/Wollbe plate: 8-1950-000   122Kg,  269Lbs -->
   <ballast x="-9.45" y="0.0" z="1.2" mass="53.8"/>     <!-- Intermediate gearbox: 8?-1515-000   24.4Kg,  53.8Lbs -->
   <ballast x="-10.74" y="0.04" z="2.74" mass="129.4"/> <!-- Tail Rotor gearbox: 246-1517-000   58.7Kg, 129.4Lbs -->
-    
+  <ballast x="6.36" y="0.0" z="-0.15" mass="1800"/>    <!-- GUSSED WEIGHT 816Kg 1800Lbs of Panel, Instruments, seats, & other equipment weight in Cockpit. This is done to bring CG below main rotor mast during empty helicopter weight. -->
+ 
   
-  
-  <ballast x="3" y=" 0.0" z="-0.5" mass="450"/> <!-- #### ? #### --> 
-  
-</airplane>
+  </airplane>
