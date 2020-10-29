@@ -33,6 +33,10 @@
     <sound>
       <path>Aircraft/Mil-Mi-8/Sounds/sound.xml</path>
     </sound>
+	
+	<instrumentation>
+      <path>Aircraft/Mil-Mi-8/Systems/instrumentation.xml</path>
+    </instrumentation>
 
     <model>
       <path archive="y">Aircraft/Mil-Mi-8/Models/Mil-Mi-8.xml</path>
@@ -69,8 +73,8 @@
     <view n="0">
       <internal archive="y">true</internal>
       <config>
-        <default-field-of-view-deg type="double">85</default-field-of-view-deg>
-        <pitch-offset-deg>-3.0</pitch-offset-deg>
+	    <default-field-of-view-deg type="double">85</default-field-of-view-deg>
+        <pitch-offset-deg>-6.0</pitch-offset-deg>
         <x-offset-m archive="y">-0.54</x-offset-m> <!-- right/left -->
         <y-offset-m archive="y">0</y-offset-m> <!-- up/down -->
         <z-offset-m archive="y">-6.13</z-offset-m> <!-- aft/fore -->
@@ -200,14 +204,15 @@
         <name>d</name>
         <desc>Close pilot door</desc>
       </key-->
-      <key>
-        <name>R</name>
-        <desc>Toggle rotor brake</desc>
-      </key>
-      <!-- ####
+      
       <key>
         <name>r</name>
         <desc>Apply rotor brake</desc>
+      </key>
+	  <!-- ####
+	 <key>
+        <name>R</name>
+        <desc>Toggle rotor brake</desc>
       </key>
       <key>
         <name>Ctrl d</name>
@@ -221,9 +226,9 @@
         <name>Ctrl f</name>
         <desc>Auto hover</desc>
       </key>
-    #### -->
-      <line></line>
-	    <text>
+	  #### -->
+	  <line></line>
+	  <text>
 =============== Mil-Mil-8 ===============
 Empty Wt.  15653 lb
 Gross Wt.  24471 lb
@@ -238,7 +243,7 @@ CG Limitations
 Main rotor rotation axis is at 1.95m
 Forward CG Limit  = +30cm  (forward of Main rotor rotation axis i.e. 2.25m)
 Backward CG Limit = -9.5cm (backward of Main rotor rotation axis i.e. 1.855m)
-	    </text>
+	  </text>
     </help>
 
     <weight n="0">
@@ -255,7 +260,7 @@ Backward CG Limit = -9.5cm (backward of Main rotor rotation axis i.e. 1.855m)
     </weight>
     <weight n="2">
       <name>Cargo</name>
-      <weight-lb>200</weight-lb>
+      <weight-lb>3500</weight-lb>
       <max-lb>8820</max-lb>
       <min-lb>10</min-lb>
     </weight>
@@ -316,7 +321,7 @@ Backward CG Limit = -9.5cm (backward of Main rotor rotation axis i.e. 1.855m)
 		    </tank>
         </fuel>
   </consumables>
-  
+
   <rotors>
     <main>
       <rpm type="double">0</rpm>
