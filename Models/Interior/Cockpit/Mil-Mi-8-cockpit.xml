@@ -190,4 +190,17 @@
       <property>controls/switches/cockpit/toggle-pkm</property>
     </condition>
   </model>
+  
+  <model>
+        <name></name>
+        <path>Aircraft/Mil-Mi-8/Models/Interior/Cockpit/Panel/Instruments/GSDI/GSDI.xml</path>
+		<offsets>
+     		 <x-m> -7.04 </x-m>
+     		 <y-m> -0.35 </y-m>
+     		 <z-m> -0.20 </z-m>
+			 <roll-deg>    0 </roll-deg>
+			 <pitch-deg>   0 </pitch-deg>
+    		 <heading-deg> 0 </heading-deg>
+       </offsets>
+  </model>
 </PropertyList>
