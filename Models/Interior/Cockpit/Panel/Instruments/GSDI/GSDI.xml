@@ -1,0 +1,184 @@
+<?xml version="1.0"?>
+
+
+
+<!--
+    Usable with FlightGear
+    Property of Gerard Robin  (C) 2010
+    Copyright License:  CREATIVE-COMMON BY-NC-SA
+-->
+<PropertyList>
+
+ <path>Models/gsdi-lynx.ac</path>
+ <texture-path>Models/Textures</texture-path>
+
+	<animation>
+		<type>noshadow</type>
+		<object-name>PAR</object-name>
+	</animation>
+
+	<animation include="Instrument-Light4.xml">
+		<object-name>IndicV</object-name>
+		<object-name>IndicU</object-name>
+                <object-name>Pointeur</object-name>
+                <object-name>Index</object-name>
+                <object-name>DSpeed</object-name>
+                <object-name>DAngle</object-name>
+	</animation>
+
+	<animation include="Instrument-Light2.xml">
+		<object-name>Fond</object-name>
+	</animation>
+        
+        <!--<animation>
+            <type>shader</type>
+            <shader>chrome</shader>
+            <texture>Aircraft/WG13_Lynx/Models/Textures/shader.png</texture>
+            <object-name>Glace</object-name>
+        </animation>-->
+        
+	<animation>
+		<type>rotate</type>
+		<object-name>IndicU</object-name>
+                <property>instrumentation/gsdi/drift-u-kt</property>
+		<interpolation>
+                        <entry>
+                            <ind>-50</ind> 
+                            <dep>19</dep>
+			</entry>
+			<entry>
+				<ind>-20</ind> <!--10/7.5-->
+				<dep>15</dep>
+			</entry>
+			<entry>
+				<ind>0</ind>
+				<dep>0</dep>
+			</entry>
+			<entry>
+				<ind>20</ind>
+				<dep>-15</dep>
+			</entry>
+                        <entry>
+                            <ind>50</ind>
+                            <dep>-19</dep>
+			</entry>
+                        <entry>
+                            <ind>51</ind>
+                            <dep>19</dep>
+			</entry>
+		</interpolation>
+                <center>
+                    <x-m>-0.108856</x-m>
+                    <y-m>0</y-m>
+                    <z-m>0</z-m>
+		</center>
+		<axis>
+                    <x>0</x>
+                    <y>1</y>
+                    <z>0</z>
+		</axis>
+ 	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>IndicV</object-name>
+                <property>instrumentation/gsdi/drift-v-kt</property>
+		<interpolation>
+                        <entry>
+                            <ind>-50</ind>
+                            <dep>-19</dep>
+			</entry>
+			<entry>
+				<ind>-20</ind>
+				<dep>-15</dep>
+			</entry>
+			<entry>
+				<ind>0</ind>
+				<dep>0</dep>
+			</entry>
+			<entry>
+				<ind>20</ind>
+				<dep>15</dep>
+			</entry>
+                        <entry>
+                            <ind>50</ind>
+                            <dep>19</dep>
+			</entry>
+		</interpolation>
+                <center>
+                    <x-m>-0.108856</x-m>
+                    <y-m>0</y-m>
+                    <z-m>0</z-m>
+                </center>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+	</animation>
+        
+        <!--Une simple supposition, il y a des zones d'ombre, je ne possède pas d'informations détaillées sur l'instrument-->
+        
+        <animation>
+            <type>rotate</type>
+            <object-name>DAngle</object-name>
+            <property>instrumentation/gsdi/drift-angle-deg</property>
+            <interpolation>
+                <entry>
+                    <ind>20</ind>
+                    <dep>36</dep>
+                </entry>
+                <entry>
+                    <ind>0</ind>
+                    <dep>0</dep>
+                </entry>
+                <entry>
+                    <ind>-20</ind>
+                    <dep>-36</dep>
+                </entry>
+            </interpolation>
+            <center>
+                <x-m>0</x-m>
+                <y-m>0</y-m>
+                <z-m>0</z-m>
+            </center>
+            <axis>
+                <x>1</x>
+                <y>0</y>
+                <z>0</z>
+            </axis>
+	</animation>
+        <animation>
+            <type>rotate</type>
+            <object-name>DSpeed</object-name>
+            <property>instrumentation/gsdi/drift-speed-kt</property>
+            <interpolation>
+                <entry>
+                    <ind>70</ind>
+                    <dep>0</dep>
+                </entry>
+                <entry>
+                    <ind>20</ind>
+                    <dep>90</dep>
+                </entry>
+                <entry>
+                    <ind>0</ind>
+                    <dep>126</dep>
+                </entry>
+            </interpolation>
+            <center>
+                <x-m>0</x-m>
+                <y-m>0</y-m>
+                <z-m>0</z-m>
+            </center>
+            <axis>
+                <x>1</x>
+                <y>0</y>
+                <z>0</z>
+            </axis>
+	</animation>
+        
+        
+</PropertyList>
+
+

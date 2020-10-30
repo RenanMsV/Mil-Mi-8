@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+
+<!--
+    Usable with FlightGear
+    Property of Gerard Robin
+    Copyright License:  CREATIVE COMMON
+-->
+
+
+<!--Fond de "Panel"-->
+
+<PropertyList>
+    <type>material</type>
+    <emission>
+            <factor-prop>controls/lighting/instruments-norm</factor-prop>
+            <red>0.30</red>
+            <green>0.15</green>
+            <blue>0.0</blue>
+    </emission>
+</PropertyList>

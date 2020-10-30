@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+
+<!--
+    Usable with FlightGear
+    Property of Gerard Robin
+    Copyright License:  CREATIVE COMMON
+-->
+
+<!-- Aiguilles -->
+
+<PropertyList>
+    <type>material</type>
+    <emission>
+            <factor-prop>controls/lighting/instruments-norm</factor-prop>
+            <red>0.80</red>
+            <green>0.40</green>
+            <blue>0.30</blue>
+    </emission>
+    <diffuse>
+            <red>1</red>
+            <green>1</green>
+            <blue>1</blue>
+    </diffuse>
+    <ambient>
+            <red>01</red>
+            <green>1</green>
+            <blue>1</blue>
+    </ambient>
+    <specular>
+            <red>1</red>
+            <green>1</green>
+            <blue>1</blue>
+    </specular>
+    <shininess> 20</shininess>
+</PropertyList>
